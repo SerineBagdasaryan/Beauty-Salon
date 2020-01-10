@@ -1,0 +1,71 @@
+#about{
+  background-color: white;
+}
+.container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.container img{
+  width: 20%;
+
+}
+
+.pink {
+  color: blueviolet;
+  font-size: 30px;
+}
+
+h1 {
+  text-align: center;
+  font-size: 50px;
+  color: white;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 100;
+  padding: 40px;
+}
+
+
+h2 {
+  text-align: center;
+  font-size: 36px;
+  color: pink;
+  font-family: 'Raleway', sans-serif;
+  letter-spacing: 24px;
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+
+
+.pre-title {
+  padding-top: 120px;
+  display: block;
+  text-align: center;
+}
+.pre-title-text {
+  color: white;
+  vertical-align: middle;
+  font-size: 64px;
+  letter-spacing: 15px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 100;
+  display: inline-block;
+}
+
+.pre-title-line {
+  display: inline-block;
+  vertical-align: middle;
+  height: 1px;
+  /*width: 200px;*/
+  background: pink;
+}
+
+h3 {
+  font-family: 'Raleway', sans-serif;
+  text-align: center;
+  color: white;
+  text-align: left;
+  font-size: 32px;
+  margin-bottom: 40px
+}
+

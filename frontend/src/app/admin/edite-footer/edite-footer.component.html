@@ -1,0 +1,11 @@
+<div class="container">
+<form [formGroup] = "footerForm">
+  <div class="form-group input-group-lg">
+  <input type="text"  class="form-control" formControlName="text1" #text1 [(ngModel)]="fdata.text1">
+  </div>
+</form>
+  <div class="form-group">
+<button class="btn btn-primary btn-block btn-lg" (click)="updateFooterData(text1.value)">Update Footer</button>
+  </div>
+</div>
+

@@ -1,0 +1,58 @@
+<div class="container">
+<form [formGroup]="contactForm">
+  <div class="form-group input-group-lg">
+  <input type="text" class="form-control" name="name" formControlName="text1" #text1 [(ngModel)]="contact.text1">
+  </div>
+  <div class="form-group input-group-lg">
+  <input type="text"  class="form-control" formControlName="text2" #text2 [(ngModel)]="contact.text2">
+  </div>
+  <div class="form-group input-group-lg">
+  <input type="text" class="form-control" formControlName="text3" #text3 [(ngModel)]="contact.text3">
+  </div>
+  <div class="form-group input-group-lg">
+  <input type="text" class="form-control" formControlName="text4" #text4 [(ngModel)]="contact.text4">
+  </div>
+  <div class="form-group input-group-lg">
+  <input type="text" class="form-control" formControlName="text5" #text5 [(ngModel)]="contact.text5">
+  </div>
+  <div class="form-group input-group-lg">
+  <input type="text" class="form-control" formControlName="text6" #text6 [(ngModel)]="contact.text6">
+  </div>
+  <div class="form-group input-group-lg">
+  <input type="text" class="form-control" formControlName="text7" #text7 [(ngModel)]="contact.text7">
+  </div>
+  <div class="form-group input-group-lg">
+  <input type="text" class="form-control" formControlName="text8" #text8 [(ngModel)]="contact.text8">
+  </div>
+  <div class="form-group input-group-lg">
+  <input type="text"  class="form-control" formControlName="text9" #text9 [(ngModel)]="contact.text9">
+  </div>
+  <div class="form-group input-group-lg">
+  <input type="text" class="form-control" formControlName="text10" #text10 [(ngModel)]="contact.text10">
+  </div>
+  <div class="form-group input-group-lg">
+  <input type="text" class="form-control" formControlName="text11" #text11 [(ngModel)]="contact.text11">
+  </div>
+  <div class="form-group input-group-lg">
+  <input type="text" class="form-control" formControlName="text12" #text12 [(ngModel)]="contact.text12">
+  </div>
+  <div class="form-group input-group-lg">
+  <input type="text" class="form-control" formControlName="text13" #text13 [(ngModel)]="contact.text13">
+  </div>
+  <div class="form-group input-group-lg">
+  <input type="text" class="form-control" formControlName="text14" #text14 [(ngModel)]="contact.text14">
+  </div>
+  <div class="form-group input-group-lg">
+  <input type="text" class="form-control" formControlName="text15" #text15 [(ngModel)]="contact.text15">
+  </div>
+  <div class="form-group input-group-lg">
+  <input type="text" class="form-control" formControlName="text16" #text16 [(ngModel)]="contact.text16">
+  </div>
+  <div class="form-group input-group-lg">
+  <input type="text" class="form-control" formControlName="text17" #text17 [(ngModel)]="contact.text17">
+  </div>
+  <div class="form-group">
+  <button class="btn btn-primary btn-block btn-lg" (click)="updateContact(text1.value,text2.value,text3.value,text4.value,text5.value,text6.value, text7.value,text8.value,text9.value,text10.value,text11.value,text12.value,text13.value,text14.value, text15.value,text16.value,text17.value)">Update Contact Page</button>
+  </div>
+</form>
+</div>

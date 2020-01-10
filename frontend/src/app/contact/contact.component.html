@@ -1,0 +1,67 @@
+<section class="banner-area" id="home" >
+<section class="contact-area section-gap" id="contact">
+  <div class="container">
+    <div class="row d-flex justify-content-center">
+      <div class="menu-content pb-60 col-lg-8">
+        <div class="title text-center">
+          <h1 class="mb-10">{{contact.text1}}</h1>
+          <p>{{contact.text2}}</p>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-lg-3 col-md-6 single-contact-info">
+        <h6 class="text-black">{{contact.text3}}</h6>
+        <p style="margin-top: 30px">
+          {{contact.text4}}
+        </p>
+      </div>
+      <div class="col-lg-3 col-md-6 single-contact-info">
+        <h6 class="text-black">{{contact.text5}}</h6>
+        <p style="margin-top: 30px">
+          {{contact.text6}}
+          {{contact.text7}}
+          {{contact.text8}}
+
+
+        </p>
+      </div>
+      <div class="col-lg-3 col-md-6 single-contact-info">
+        <h6 class="text-black">{{contact.text9}}</h6>
+        <p style="margin-top: 30px">
+          {{contact.text10}}
+          {{contact.text11}}
+          {{contact.text12}}
+        </p>
+      </div>
+      <div class="col-lg-3 col-md-6 single-contact-info">
+        <h6 class="text-black">{{contact.text13}}</h6>
+        <p style="margin-top: 30px">
+          {{contact.text14}}
+          {{contact.text15}}
+          {{contact.text16}}
+        </p>
+      </div>
+    </div>
+    <form class="form-area mt-60" id="myForm" action="../../assets/mail.php" method="post" class="contact-form text-right">
+      <div class="row">
+        <div class="col-lg-6 form-group">
+          <input name="name" placeholder="Enter your name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your name'" class="common-input mb-20 form-control" required="" type="text">
+
+          <input name="email" placeholder="Enter email address" pattern="[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{1,63}$" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter email address'" class="common-input mb-20 form-control" required="" type="email">
+
+          <input name="subject" placeholder="Enter your subject" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Enter your subject'" class="common-input mb-20 form-control" required="" type="text">
+        </div>
+        <div class="col-lg-6 form-group">
+          <label>
+            <textarea class="common-textarea mt-10 form-control" name="message" placeholder="Messege" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Messege'" required=""></textarea>
+          </label>
+          <button class="primary-btn mt-20"> {{contact.text17}}<span class="lnr lnr-arrow-right"></span></button>
+          <div class="alert-msg">
+          </div>
+        </div></div>
+    </form>
+
+  </div>
+</section>
+</section>

@@ -1,0 +1,9 @@
+<div class="container"  *ngFor="let item of images">
+    <img class="about-img" src="../../assets/images/{{item.image}}">
+  <div class="form-group">
+   <a class="btn btn-primary btn-block btn-lg " [routerLink]="['/editeImageWork/', item.id]" skipLocationChange>Edit Image</a>
+    <a  class="btn btn-danger btn-block btn-lg" (click)='deleteImage(item.id)'>Delete Image</a>
+  </div>
+</div>
+
+

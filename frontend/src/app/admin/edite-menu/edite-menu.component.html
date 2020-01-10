@@ -1,0 +1,14 @@
+<div class="container">
+<form [formGroup]="menuForm" class="mt-5 ml-5">
+  <div class="form-group input-group-lg">
+  <input  type="text" class="form-control"  name="name" formControlName="name" #name [(ngModel)]="menu.name">
+  </div>
+  <div class="form-group input-group-lg">
+  <input  type="text" class="form-control" formControlName="routerlink" #routerlink [(ngModel)]="menu.routerlink">
+  </div>
+  <div class="form-group">
+  <button  class="btn btn-primary btn-block btn-lg" (click)="updateMenu(name.value,routerlink.value)">Update menu</button>
+  </div>
+</form>
+</div>
+

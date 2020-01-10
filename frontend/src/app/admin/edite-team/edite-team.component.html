@@ -1,0 +1,29 @@
+
+<div class="container mt-3">
+<form [formGroup]="teamForm">
+  <div class="form-group input-group-lg">
+  <input type="text"  name="name" class="form-control" formControlName="firstname" #firstname [(ngModel)]="data.firstname">
+  </div>
+  <div class="form-group input-group-lg">
+  <input type="text" class="form-control" formControlName="lastname" #lastname [(ngModel)]="data.lastname">
+  </div>
+  <div class="form-group input-group-lg">
+  <input type="text" class="form-control" formControlName="specialty" #specialty [(ngModel)]="data.specialty">
+  </div>
+  <div class="form-group input-group-lg">
+  <input type="text"  class="form-control" formControlName="description" #description [(ngModel)]="data.description">
+  </div>
+  <div class="form-group input-group-lg">
+  <input type="text"  class="form-control" formControlName="imageName" #imageName [(ngModel)]="data.image">
+  </div>
+  <div class="form-group input-group-lg">
+    <img src="../../../assets/images/{{data.image}}" style="width: 100px; height: 100px" alt="">
+  </div>
+  <div class="form-group">
+    <input type="file" (change)="uploadFile($event)">
+  </div>
+  <div class="form-group">
+    <button  (click)="submitForm()" class="btn btn-primary  btn-lg">Update Teampage</button>
+  </div>
+</form>
+</div>

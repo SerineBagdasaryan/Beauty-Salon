@@ -1,0 +1,101 @@
+<section class="banner-area" id="home">
+<div class="limiter">
+  <div class="container-login100">
+    <div class="wrap-login100 p-l-50 p-r-50 p-t-77 p-b-30">
+      <form class="login100-form validate-form" [formGroup]="register" novalidate>
+					<span class="login100-form-title p-b-55">
+		{{regData.text1}}
+					</span>
+
+        <div class="wrap-input100 validate-input m-b-16" data-validate = "Valid name is required">
+          <input class="input100" type="text" name="name" placeholder="Name" #name formControlName="name" pattern="[a-zA-Z ]*">
+          <span class="focus-input100"></span>
+          <span class="symbol-input100">
+							 <span class="lnr lnr-user"></span>
+						</span>
+        </div>
+<!--        <div class="alert alert-danger"-->
+<!--             *ngIf="register.controls['name'].invalid && register.controls['name'].touched">-->
+<!--          Name is required-->
+<!--        </div>-->
+        <p style="color: red">{{nameError}}</p>
+        <div class="wrap-input100 validate-input m-b-16" data-validate = "Valid lastname is required">
+          <input class="input100" type="text" name="lastname" placeholder="Lastname" #lastname formControlName="lastname" pattern="[a-zA-Z ]*">
+          <span class="focus-input100"></span>
+          <span class="symbol-input100">
+							<span class="lnr lnr-user"></span>
+						</span>
+        </div>
+<!--        <div class="alert alert-danger"-->
+<!--             *ngIf="register.controls['lastname'].invalid && register.controls['lastname'].touched">-->
+<!--          Lastname is required-->
+<!--        </div>-->
+      <p style="color: red">{{lastnameError}}</p>
+        <div class="wrap-input100 validate-input m-b-16" data-validate = "Valid phone number is required" >
+          <input class="input100" type="text" name="phone" placeholder="Phone" #phone formControlName="phone" pattern="[0-9]*">
+          <span class="focus-input100"></span>
+          <span class="symbol-input100">
+							<span class="lnr lnr-phone-handset"></span>
+						</span>
+        </div>
+        <p style="color: red">{{phoneErr}}</p>
+<!--        <div class="alert alert-danger"-->
+<!--             *ngIf="register.controls['phone'].invalid && register.controls['phone'].touched">-->
+<!--          Phone is required-->
+<!--        </div>-->
+
+        <div class="wrap-input100 validate-input m-b-16" data-validate = "Valid email is required: ex@abc.xyz">
+          <input class="input100" type="text" name="email" placeholder="Email" formControlName="email" #email >
+<!--          pattern = "^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+.[a-zA-Z0-9-.]+$"-->
+          <span class="focus-input100"></span>
+          <span class="symbol-input100">
+							<span class="lnr lnr-envelope"></span>
+						</span>
+        </div>
+        <p style="color: red">{{emailErr}}</p>
+<!--        <div class="alert alert-danger"-->
+<!--             *ngIf="register.controls['email'].invalid && register.controls['email'].touched">-->
+<!--          Email is required-->
+<!--        </div>-->
+        <div class="wrap-input100 validate-input m-b-16" data-validate = "Password is required">
+          <input class="input100" type="password" name="pass" placeholder="Password" #password formControlName="password" minlength = "5" pattern="">
+<!--          (?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&].{8,}-->
+          <span class="focus-input100"></span>
+          <span class="symbol-input100">
+							<span class="lnr lnr-lock"></span>
+						</span>
+        </div>
+<!--        <div class="alert alert-danger"-->
+<!--             *ngIf="register.controls['password'].invalid && register.controls['password'].touched">-->
+<!--          Password is required-->
+<!--        </div>-->
+
+        <div class="wrap-input100 validate-input m-b-16" data-validate = "ConfirmPassword is required">
+          <input class="input100" type="password" name="pass" placeholder="ConfirmPassword" #confirmPassword formControlName="confirmPassword"  minlength = "5" pattern="">
+<!--          (?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[$@$!%*?&])[A-Za-z\d$@$!%*?&].{8,}-->
+          <span class="focus-input100"></span>
+          <span class="symbol-input100">
+							<span class="lnr lnr-lock"></span>
+						</span>
+        </div>
+        <p style="color: red">{{confirmPasswordErr}}</p>
+<!--        <div class="alert alert-danger"-->
+<!--             *ngIf="register.controls['confirmPassword'].invalid && register.controls['confirmPassword'].touched">-->
+<!--          Confirm Password is required-->
+<!--        </div>-->
+        <p style="color: red ; font-size: 20px">{{message}}</p>
+        <div class="container-login100-form-btn p-t-25">
+          <button   class="login100-form-btn" (click)="registration(name.value,lastname.value,phone.value,email.value,password.value,confirmPassword.value);name.value='';lastname.value='';phone.value='';email.value='';password.value='';confirmPassword.value=''">
+            {{regData.text2}}
+          </button>
+<span style="color: green">{{registered}}</span>
+<span style="color: red">{{emailDuplicateError}}</span>
+        </div>
+
+      </form>
+    </div>
+  </div>
+</div>
+
+
+</section>

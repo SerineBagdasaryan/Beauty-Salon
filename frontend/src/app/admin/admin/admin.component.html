@@ -1,0 +1,39 @@
+<div class="main-container-fluid">
+  <app-admin-header></app-admin-header>
+  <!-- LEFT-CONTAINER -->
+  <div class="row">
+  <div class="left-container container col-md-2">
+    <div class="menu-box block">
+      <h2 class="titular"></h2>
+      <ul class="menu-box-menu">
+        <li>
+          <a style="text-align: center" [routerLink]="['users']"  skipLocationChange class="menu-box-tab">All users</a>
+          <a style="text-align: center" [routerLink]="['createmenu']"  skipLocationChange class="menu-box-tab">Create Menu</a>
+          <a style="text-align: center" [routerLink]="['createImageWork']"  skipLocationChange class="menu-box-tab">Upload Image Work</a>
+          <a style="text-align: center" [routerLink]="['getImageWork']"  skipLocationChange class="menu-box-tab">Get Image Work</a>
+          <a style="text-align: center" [routerLink] ="['createTeamMember']"  skipLocationChange class="menu-box-tab">Create team member</a>
+          <a style="text-align: center" [routerLink] ="['homepages']"  skipLocationChange class="menu-box-tab">Home page</a>
+          <a style="text-align: center" [routerLink] ="['getTeam']"  skipLocationChange class="menu-box-tab">Team page</a>
+          <a style="text-align: center" [routerLink] ="['getContact']"  skipLocationChange class="menu-box-tab">Contact page</a>
+          <a style="text-align: center" [routerLink] ="['getMenu']" skipLocationChange class="menu-box-tab">Menu page</a>
+          <a style="text-align: center" [routerLink] ="['createPrice']"  skipLocationChange class="menu-box-tab">Create Price page</a>
+          <a style="text-align: center" [routerLink] ="['getPrice']"  skipLocationChange class="menu-box-tab">Get Price page</a>
+          <a style="text-align: center" [routerLink] ="['getService']"  skipLocationChange class="menu-box-tab">Service page</a>
+          <a style="text-align: center" [routerLink] ="['getService1']"  skipLocationChange class="menu-box-tab">Service_1 page</a>
+          <a style="text-align: center" [routerLink] ="['getService2']"  skipLocationChange class="menu-box-tab">Service_2 page</a>
+          <a style="text-align: center" [routerLink] ="['getService3']"  skipLocationChange class="menu-box-tab">Service_3 page</a>
+          <a style="text-align: center" [routerLink] ="['getfooter']"  skipLocationChange class="menu-box-tab">Footer page</a>
+<!--        <button (click)="show =!show"> Get footer page </button>-->
+        </li>
+      </ul>
+    </div>
+    </div>
+    <div class="col-md-8">
+      <router-outlet></router-outlet>
+<!--      <app-get-footer *ngIf="show"></app-get-footer>-->
+    </div>
+    </div>
+  <app-admin-footer></app-admin-footer>
+  </div>
+
+

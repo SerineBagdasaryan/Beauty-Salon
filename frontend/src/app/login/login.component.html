@@ -1,0 +1,58 @@
+<section class="banner-area" id="home">
+<div class="limiter">
+  <div class="container-login100">
+    <div class="wrap-login100 p-l-50 p-r-50 p-t-77 p-b-30">
+      <form class="login100-form validate-form" [formGroup]="loginForm">
+					<span class="login100-form-title p-b-55">
+					{{loginInfo.text1}}
+					</span>
+
+        <div class="wrap-input100 validate-input m-b-16" data-validate = "Valid email is required: ex@abc.xyz">
+          <input class="input100" type="text" name="email" placeholder="Email" formControlName="email" #email>
+          <span class="focus-input100"></span>
+          <span class="symbol-input100">
+							<span class="lnr lnr-envelope"></span>
+						</span>
+        </div>
+        <div class="alert alert-danger"
+             *ngIf="loginForm.controls['email'].invalid && loginForm.controls['email'].touched">
+          Email is required
+        </div>
+        <div class="wrap-input100 validate-input m-b-16" data-validate = "Password is required">
+          <input class="input100" type="password" name="pass" placeholder="Password" formControlName="password" #password>
+          <span class="focus-input100"></span>
+          <span class="symbol-input100">
+							<span class="lnr lnr-lock"></span>
+						</span>
+        </div>
+        <div class="alert alert-danger"
+             *ngIf="loginForm.controls['password'].invalid && loginForm.controls['password'].touched">
+          Password is required
+        </div>
+        <div class="wrap-input100" >
+          <input type="checkbox" [(ngModel)]="theCheckbox" #checkbox formControlName="checkbox"  data-md-icheck (change)="toggleVisibility($event)"/>
+          <span class="checkmark"></span>
+          <label class="remember"> {{loginInfo.text2}}</label>
+          <a [routerLink]= "['/forgotpassword']"  class="fgpass">{{loginInfo.text3}} </a>
+        </div>
+        <span style="color: red">{{error}}</span>
+        <div class="container-login100-form-btn p-t-25">
+          <button class="login100-form-btn" [disabled]="loginForm.pristine || loginForm.invalid "(click)="login(email.value,password.value,checkbox.value);email.value=''; password.value=''">
+            {{loginInfo.text4}}
+          </button>
+        </div>
+      </form>
+      <div class="container">
+        <button class="btn btn-primary fb-btn" (click)="signInWithFB()"><i class="fa fa-facebook-square fa-2x" aria-hidden="true"></i>{{loginInfo.text5}}</button>
+        <button class="loginBtn loginBtn&#45;&#45;google"  (click)="signInWithgoogle()">
+          {{loginInfo.text6}}
+                </button>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+<!--<p>{{fbUrl}}</p>-->
+<!--<p>{{googleUrl}}</p>-->
+</section>

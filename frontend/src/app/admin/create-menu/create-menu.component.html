@@ -1,0 +1,14 @@
+<div class="container">
+  <form [formGroup]="form">
+    <div class="form-group input-group-lg">
+      <input class="form-control" placeholder="Route Name" formControlName="name" #name>
+    </div>
+    <div class="form-group input-group-lg">
+      <input class="form-control" placeholder="Router Link" formControlName="routerlink" #routerlink>
+    </div>
+    <div class="form-group">
+      <button  (click)="submitForm(name.value,routerlink.value);name.value = ''; routerlink.value = '' " class="btn btn-primary btn-block btn-lg">Create</button>
+  <span style="color: green">{{mesage}}</span>
+    </div>
+  </form>
+</div>

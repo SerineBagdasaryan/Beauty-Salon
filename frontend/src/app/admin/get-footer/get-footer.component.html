@@ -1,0 +1,15 @@
+<div class="container">
+<table border="1">
+
+  <tr>
+    <td >{{ footerData.text1}}</td>
+  </tr>
+
+</table>
+  <div class="form-group">
+    <a class="btn btn-primary btn-block btn-lg" [routerLink]="['/editefooter']" skipLocationChange >Edit Footer</a>
+    <a  class="btn btn-danger btn-block btn-lg" (click)='deleteFooter(footerData.id)'>Delete Footer</a>
+  </div>
+</div>
+
+

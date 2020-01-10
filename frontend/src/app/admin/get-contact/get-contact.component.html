@@ -1,0 +1,59 @@
+<div class="container">
+<table  border="1">
+  <tr>
+    <td >{{ contact.text1 }}</td>
+  </tr>
+  <tr>
+    <td >{{ contact.text2}}</td>
+  </tr>
+  <tr>
+    <td> {{contact.text3}}</td>
+  </tr>
+  <tr>
+    <td> {{contact.text4}}</td>
+  </tr>
+  <tr>
+    <td> {{contact.text5}}</td>
+  </tr>
+  <tr>
+    <td> {{contact.text6}}</td>
+  </tr>
+  <tr>
+    <td> {{contact.text7}}</td>
+  </tr>
+  <tr>
+    <td> {{contact.text8}}</td>
+  </tr>
+  <tr>
+    <td> {{contact.text9}}</td>
+  </tr>
+  <tr>
+    <td> {{contact.text10}}</td>
+  </tr>
+  <tr>
+    <td> {{contact.text11}}</td>
+  </tr>
+  <tr>
+    <td> {{contact.text12}}</td>
+  </tr>
+  <tr>
+    <td> {{contact.text13}}</td>
+  </tr>
+  <tr>
+    <td> {{contact.text14}}</td>
+  </tr>
+  <tr>
+    <td> {{contact.text15}}</td>
+  </tr>
+  <tr>
+    <td> {{contact.text16}}</td>
+  </tr>
+  <tr>
+    <td> {{contact.text17}}</td>
+  </tr>
+</table>
+<div class="form-group">
+  <a [routerLink]="['/editecontact']" skipLocationChange class="btn btn-primary btn-block btn-lg">Edit</a>
+  <a (click)="deleteContact(contact.id)" class="btn btn-danger btn-block btn-lg">Delete</a>
+</div>
+</div>

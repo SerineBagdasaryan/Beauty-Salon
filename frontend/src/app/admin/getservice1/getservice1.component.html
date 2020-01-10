@@ -1,0 +1,41 @@
+<div class="container">
+<table  class="container text-center"  border="1">
+
+  <tr>
+    <td><img style="width: 200px; height: 200px" src="../../../assets/img/{{serviceData.image1}}" alt=""></td>
+    <td >{{ serviceData.text1}}</td>
+  </tr>
+  <tr>
+    <td><img style="width: 200px; height: 200px" src="../../../assets/img/{{serviceData.image2}}" alt=""></td>
+    <td >{{ serviceData.text2}}</td>
+
+  </tr>
+
+  <tr>
+    <td><img style="width: 200px; height: 200px" src="../../../assets/img/{{serviceData.image3}}" alt=""></td>
+    <td >{{ serviceData.text3}}</td>
+
+  </tr>
+  <tr>
+    <td><img style="width: 200px; height: 200px" src="../../../assets/img/{{serviceData.image4}}" alt=""></td>
+    <td >{{ serviceData.text4}}</td>
+
+  </tr>
+  <tr>
+    <td><img style="width: 200px; height: 200px" src="../../../assets/img/{{serviceData.image5}}" alt=""></td>
+    <td >{{ serviceData.text5}}</td>
+
+  </tr>
+  <tr>
+    <td><img  style="width: 200px; height: 200px" src="../../../assets/img/{{serviceData.image6}}" alt=""></td>
+    <td >{{ serviceData.text6}}</td>
+
+  </tr>
+</table>
+  <div class="form-group">
+    <a class="btn btn-primary btn-block btn-lg" [routerLink]="['/editeservice1']" skipLocationChange >Edit Service</a>
+    <a  class="btn btn-danger btn-block btn-lg" (click)='deleteService(serviceData.id)'>Delete Service</a>
+  </div>
+</div>
+
+

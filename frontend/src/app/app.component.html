@@ -1,0 +1,13 @@
+<!-- <app-header *ngIf="router.url !='/admin' && router.url != '/admin/users'"></app-header >-->
+<!--  <router-outlet></router-outlet>-->
+<!--  <app-footer *ngIf="router.url !='/admin'"></app-footer>-->
+<app-header *ngIf="show"></app-header >
+<router-outlet></router-outlet>
+<app-footer *ngIf="show"></app-footer>
+<!--<section id="admin"*ngIf="router.url ==='/admin'" >-->
+<!--  <app-admin-header></app-admin-header>-->
+<!--  <app-admin-sidebar></app-admin-sidebar>-->
+<!--&lt;!&ndash;  <app-admin></app-admin>&ndash;&gt;-->
+<!--  <router-outlet></router-outlet>-->
+<!--  <app-admin-footer></app-admin-footer>-->
+<!--</section>-->

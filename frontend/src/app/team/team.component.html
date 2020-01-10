@@ -1,0 +1,32 @@
+<section class="banner-area" id="home">
+<section class="team-area section-gap" id="team">
+  <div class="container">
+    <div class="row d-flex justify-content-center">
+      <div class="menu-content pb-70 col-lg-8">
+        <div class="title text-center">
+<!--          <h1 class="mb-10">{{team.firstname}}</h1>-->
+<!--          <p>{{team.lastname}}</p>-->
+        </div>
+      </div>
+    </div>
+    <div class="row justify-content-center d-flex align-items-center" *ngFor="let item of team">
+      <div class="col-lg-3 col-md-6 single-team">
+        <div class="thumb">
+          <img  class="img-fluid" width="50px" src="../../../assets/images/{{item.image}}">
+          <div class="align-items-center justify-content-center d-flex">
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-linkedin"></i></a>
+          </div>
+        </div>
+        <div class="meta-text mt-30 text-center">
+          <h4>{{item.firstname}}</h4>
+          <h4>{{item.lastname}}</h4>
+          <p>{{item.description}}</p>
+          <p>{{item.specialty}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</section>

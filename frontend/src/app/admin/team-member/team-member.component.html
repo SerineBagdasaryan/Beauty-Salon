@@ -1,0 +1,28 @@
+<div class="container">
+  <form [formGroup]="teamForm">
+    <div class="form-group input-group-lg">
+      <input type="text" class="form-control"  name="firstname" formControlName="firstname" #firstname>
+    </div>
+    <div class="form-group input-group-lg">
+      <input type="text" class="form-control"  formControlName="lastname" #lastname>
+    </div>
+    <div class="form-group input-group-lg">
+      <input type="text" class="form-control"  formControlName="specialty" #specialty>
+    </div>
+
+    <div class="form-group input-group-lg">
+      <input type="text" class="form-control" formControlName="description" #description>
+    </div>
+
+    <div class="form-group">
+      <input type="file" (change)="uploadFile($event)">
+    </div>
+    <div class="form-group">
+      <button  (click)="submitForm()" class="btn btn-primary btn-block btn-lg">Create team  member</button>
+    </div>
+
+  </form>
+</div>
+
+
+

@@ -1,0 +1,50 @@
+<section class="banner-area" id="home">
+<div class="container portfolio">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="heading">
+      </div>
+    </div>
+  </div>
+  <div class="bio-info" *ngFor="let item of user">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="bio-image">
+              <div>
+<img src = "../../assets/images/{{item.image}}" alt="User image" class="img" *ngIf="show">
+<!--<a  (click)="deleteImg(images.id)" ><span style="cursor: pointer;position: absolute; z-index: 2">X</span></a>-->
+              </div>
+            </div>
+            <div class="bio-image" *ngFor="let item of user">
+              <div>
+                <img src = "{{item.image}}" alt="User image" class="img" *ngIf="!show">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="bio-content">
+            <p>{{item.name}}</p>
+            <p>{{item.lastname}}</p>
+            <p>{{item.email}}</p>
+            <p>{{item.phone}}</p>
+        </div>
+      </div>
+      <a   style="margin-top: 10%;margin-left: 15%" [routerLink]="['/changePassword']" *ngIf="show">Change Password</a>
+    </div>
+    <div class="row mt-5">
+      <div class="form-group">
+        <form  enctype="multipart/form-data" *ngIf="show">
+          <input  type="file" (change)="OnFileSelected($event)" name='file'><br>
+          <button type='submit' class="btn btn-primary btn-block " (click)="OnUpload()">Save image</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+</section>

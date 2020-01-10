@@ -1,0 +1,82 @@
+<div class="container mt-3">
+  <form [formGroup]="homeForm">
+    <div class="form-group input-group-lg">
+      <input type="text" class="form-control"  name="name" formControlName="textInfo" #textInfo [(ngModel)]="data.textInfo">
+    </div>
+    <div class="form-group input-group-lg">
+      <input type="text" class="form-control"  formControlName="textInfo1" #textInfo1 [(ngModel)]="data.textInfo1">
+    </div>
+    <div class="form-group input-group-lg">
+      <input type="text" class="form-control"  formControlName="buttonText" #buttonText [(ngModel)]="data.buttonText">
+    </div>
+
+    <div class="form-group input-group-lg">
+      <img src="../../../assets/images/{{data.image}}" style="width: 100px; height: 100px" alt="">
+    </div>
+    <div class="form-group input-group-lg">
+      <input type="text" class="form-control" formControlName="imageName" #imageName [(ngModel)]="data.image">
+    </div>
+    <div class="form-group input-group-lg">
+      <input type="text" class="form-control" formControlName="aboutSalon" #aboutSalon [(ngModel)]="data.aboutSalon">
+    </div>
+    <div class="form-group">
+      <input type="file" (change)="uploadFile($event)">
+    </div>
+    <div class="form-group">
+      <button  (click)="submitForm()" class="btn btn-primary btn-block btn-lg">Update Homepage</button>
+    </div>
+<!--    <input id="cin" name="cin" type="file" (change)="fileChangeEvent($event)" placeholder="Upload a file..." multiple/>-->
+<!--    <button type="button" class="btn btn-success btn-s" (click)="upload()">Update Home Page-->
+<!--    </button>-->
+
+    <!--    <div class="form-group input-group-lg">-->
+<!--      <img src="../../../assets/images/{{data.image1}}" style="width: 100px; height: 100px" alt="">-->
+<!--    </div>-->
+<!--    <div class="form-group input-group-lg">-->
+<!--    <img src="../../../assets/images/{{data.image2}}" style="width: 100px; height: 100px" alt="s">-->
+<!--  </div>-->
+<!--    <div class="form-group input-group-lg">-->
+<!--    <img src="../../../assets/images/{{data.image3}}" style="width: 100px; height: 100px" alt="a">-->
+<!--  </div>-->
+<!--    <div class="form-group">-->
+<!--      <input type="file" (change)="uploadFile($event)">-->
+<!--    </div>-->
+
+
+  </form>
+</div>
+
+
+<!--<form [formGroup]="homeForm" (ngSubmit)="submitForm()">-->
+<!-- <br><br>-->
+<!--  <br><br>-->
+<!--  <br><br>-->
+<!--  <img style="width: 100px; height: 100px" src="../../../assets/images/{{data.image}}"><br><br>-->
+<!-- <br><br>-->
+<!--  <br><br>-->
+<!-- <br><br>-->
+<!--<br><br>-->
+<!--&lt;!&ndash;  <button class="btn-dark" (click)="updateHome(textInfo.value,textInfo1.value,buttonText.value,text1.value,text2.value,text3.value, text4.value)">Update home Page</button>&ndash;&gt;-->
+<!--</form>-->
+<!--<form  enctype="multipart/form-data" style="margin-left: 30px">-->
+<!--  <input type="file"  (change)="OnFileSelected($event)" name='file'><br>-->
+<!--  <button type='submit' class="btn-primary" (click)="OnUpload()">Save image</button>-->
+<!--</form>-->
+<!--<div class="container">-->
+<!--  <form [formGroup]="form">-->
+<!--    <div class="form-group">-->
+<!--      <input type="file" (change)="uploadFile($event)">-->
+<!--    </div>-->
+<!--    <div class="form-group">-->
+<!--      <input type="file" (change)="uploadFile1($event)">-->
+<!--    </div>-->
+
+<!--    <div class="form-group input-group-lg">-->
+<!--      <input class="form-control" placeholder="Name" formControlName="name">-->
+<!--    </div>-->
+
+<!--    <div class="form-group">-->
+<!--    -->
+<!--    </div>-->
+<!--  </form>-->
+<!--</div>-->
