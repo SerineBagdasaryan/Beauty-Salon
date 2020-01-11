@@ -182,6 +182,9 @@ deleteService(id) {
     const obj = { price, serviceName, discount};
     return this.http.post(`${this.url}/createPrice`, obj);
   }
+  createService(formData) {
+return this.http.post(`${this.url}/createService`, formData);
+  }
 }
 
 

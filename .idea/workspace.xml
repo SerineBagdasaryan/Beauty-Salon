@@ -2,9 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c664a6bf-1ce9-4afc-810b-18f8cfd6237f" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/backend/frontend/src/assets/images/3aaccc28d5364b02301d25dde64cd67e" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/frontend/src/assets/images/6b996a9a94fb24a90decb87185b9632a" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/frontend/src/assets/images/9caaa7ed15a4ee39c120189e8729943b" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/controllers/AdminController.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/controllers/AdminController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/routes/adminRoutes.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/routes/adminRoutes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/admin/admin-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/admin/admin-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/admin/admin.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/admin/admin.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/admin/admin.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/admin/admin.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/admin/admin/admin.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/admin/admin/admin.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/admin/get-service/get-service.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/admin/get-service/get-service.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/admin/get-service/get-service.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/admin/get-service/get-service.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/admin/team-member/team-member.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/admin/team-member/team-member.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/home/home.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/home/home.component.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,6 +101,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/frontend/node_modules/typescript/lib" />
   </component>
   <component name="RecentsManager">
@@ -223,6 +232,11 @@
       <workItem from="1578637998237" duration="23672000" />
       <workItem from="1578669744548" duration="1280000" />
       <workItem from="1578674135667" duration="335000" />
+      <workItem from="1578675139028" duration="6552000" />
+      <workItem from="1578737741199" duration="420000" />
+      <workItem from="1578738900846" duration="543000" />
+      <workItem from="1578739462791" duration="19000" />
+      <workItem from="1578739638782" duration="17000" />
     </task>
     <servers />
   </component>
@@ -258,14 +272,18 @@
       <screen x="47" y="27" width="1319" height="741" />
     </state>
     <state x="489" y="154" width="424" height="484" key="FileChooserDialogImpl/47.27.1319.741@47.27.1319.741" timestamp="1578159761321" />
-    <state x="70" y="27" width="1230" height="470" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1578552928740">
+    <state x="195" y="31" key="SettingsEditor" timestamp="1578739065481">
       <screen x="47" y="27" width="1319" height="741" />
     </state>
-    <state x="70" y="27" width="1230" height="470" key="com.intellij.history.integration.ui.views.FileHistoryDialog/47.27.1319.741@47.27.1319.741" timestamp="1578552928740" />
-    <state x="362" y="224" key="com.intellij.ide.util.TipDialog" timestamp="1578674141107">
+    <state x="195" y="31" key="SettingsEditor/47.27.1319.741@47.27.1319.741" timestamp="1578739065481" />
+    <state x="70" y="27" width="1230" height="470" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1578679253914">
       <screen x="47" y="27" width="1319" height="741" />
     </state>
-    <state x="362" y="224" key="com.intellij.ide.util.TipDialog/47.27.1319.741@47.27.1319.741" timestamp="1578674141107" />
+    <state x="70" y="27" width="1230" height="470" key="com.intellij.history.integration.ui.views.FileHistoryDialog/47.27.1319.741@47.27.1319.741" timestamp="1578679253914" />
+    <state x="362" y="224" key="com.intellij.ide.util.TipDialog" timestamp="1578739641555">
+      <screen x="47" y="27" width="1319" height="741" />
+    </state>
+    <state x="362" y="224" key="com.intellij.ide.util.TipDialog/47.27.1319.741@47.27.1319.741" timestamp="1578739641555" />
     <state x="360" y="27" width="683" height="741" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1578551972807">
       <screen x="47" y="27" width="1319" height="741" />
     </state>

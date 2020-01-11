@@ -189,6 +189,26 @@ exports.multipleFiles = function(req,res) {
  }
 }
 
+exports.createService = function(req,res) {
+ console.log(req.files);
+ console.log(req.body);
+ const title= req.body.title;
+ const description = req.body.description;
+ if(req.files){
+  req.files.forEach(function (file) {
+   let filename = (new Date).valueOf() + "_" + file.originalname;
+   fs.rename(file.path, '../frontend/src/assets/images/' + filename, function (err) {
+    if (err) throw err;
+    /////   INSERT
+    db.query( "INSERT INTO service (title, description, image) VALUES (?,?,?)", [title,description,filename],function (err,data) {
+     if (err) return console.log(err);
+     res.json({ msg: 'inserted'});
+    })
+   })
+  })
+ }
+}
+
 exports.getImagesWork = function(req,res) {
  db.query(`select *from imagesWork`, function (err,data) {
 if (err) return console.log(err);

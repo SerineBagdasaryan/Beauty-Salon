@@ -35,11 +35,13 @@ import {EditeOurWorkImageComponent} from './edite-our-work-image/edite-our-work-
 import {TeamMemberComponent} from './team-member/team-member.component';
 import {CreatePriceComponent} from './create-price/create-price.component';
 import {GetPriceComponent} from './get-price/get-price.component';
+import {CreateServiceComponent} from './create-service/create-service.component';
 
 const routes: Routes = [
   { path: 'admin', component: AdminComponent, canActivate: [AdminGuard], children: [
       {path: 'users', component: UsersComponent, canActivate: [AdminGuard]},
       {path: 'createImageWork', component: CreateOurWorkImageComponent, canActivate: [AdminGuard]},
+      {path: 'createService', component: CreateServiceComponent, canActivate: [AdminGuard]},
       {path: 'createTeamMember', component: TeamMemberComponent, canActivate: [AdminGuard]},
       {path: 'getImageWork', component: GetImagesWorkComponent, canActivate: [AdminGuard]},
       {path: 'homepages', component: HomepagesComponent, canActivate: [AdminGuard]},

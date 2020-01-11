@@ -7,7 +7,7 @@ import {AdminService} from '../admin.service';
   styleUrls: ['./get-service.component.css']
 })
 export class GetServiceComponent implements OnInit {
-  private serviceData: any = {};
+  private serviceData: any = [];
 
   constructor(private service: AdminService) { }
 
@@ -16,7 +16,7 @@ export class GetServiceComponent implements OnInit {
   }
 getservice() {
   this.service.getservice().subscribe((data: any) => {
-    this.serviceData = data[0];
+    this.serviceData = data;
   });
 }
   deleteService(id) {

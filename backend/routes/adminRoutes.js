@@ -55,6 +55,7 @@ router.post('/createMenu',controller.createMenu);
 router.get('/getImagesWork',controller.getImagesWork);
 router.post('/updateImagesWork', upload.any('file'), controller.updateImagesWork);
 router.post('/createTeamMember', upload.any('file'), controller.createTeamMember);
+router.post('/createService', upload.any('file'), controller.createService);
 router.get('/deleteImagesWork/:id', controller.deleteImagesWork);
 router.post('/updateTeam',upload.any('file'), controller.updateTeam);
 router.post('/createPrice', controller.createPrice);

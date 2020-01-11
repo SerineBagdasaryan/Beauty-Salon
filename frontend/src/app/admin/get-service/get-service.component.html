@@ -1,48 +1,13 @@
-<div class="container">
-<table  class="container text-center"  border="1">
-  <tr>
-    <td >{{ serviceData.text1}}</td>
-  </tr>
-  <tr>
-    <td >{{ serviceData.text2}}</td>
-  </tr>
-  <tr>
-    <td><img src="../../../assets/img/{{serviceData.image1}}" alt=""></td>
-  </tr>
-  <tr>
-    <td >{{ serviceData.text3}}</td>
-  </tr>
-  <tr>
-    <td >{{ serviceData.text4}}</td>
-  </tr>
-  <tr>
-    <td><img src="../../../assets/img/{{serviceData.image2}}" alt=""></td>
-  </tr>
-  <tr>
-    <td >{{ serviceData.text5}}</td>
-  </tr>
-  <tr>
-    <td >{{ serviceData.text6}}</td>
-  </tr>
-  <tr>
-    <td><img src="../../../assets/img/{{serviceData.image3}}" alt=""></td>
-  </tr>
-  <tr>
-    <td >{{ serviceData.text7}}</td>
-  </tr>
-  <tr>
-    <td >{{ serviceData.text8}}</td>
-  </tr>
-  <tr>
-    <td><img src="../../../assets/img/{{serviceData.image4}}" alt=""></td>
-  </tr>
-</table>
-
-  <div class="form-group">
-    <a class="btn btn-primary btn-block btn-lg" [routerLink]="['/editeservice']" skipLocationChange >Edit Service</a>
-    <a  class="btn btn-danger btn-block btn-lg" (click)='deleteService(serviceData.id)'>Delete Service</a>
-  </div>
+<div class="container mt-5">
+  <table class="container text-center"  border="1">
+    <tr *ngFor="let item of services,  let i = index">
+      <td>{{i+1}}</td>
+      <td >{{ item.title }}</td>
+      <td>{{ item.description }}</td>
+      <td><img src="../../../assets/images/{{ item.discount }}" alt=""></td>
+      <td><a [routerLink]="['/editeprice/', item.id]" skipLocationChange class="btn btn-primary btn-block">Edite Price </a></td>
+      <td><a (click)="deletePricepage(item.id)" class="btn btn-danger btn-block">Delete Price</a></td>
+    </tr>
+  </table>
 </div>
-
-
 
