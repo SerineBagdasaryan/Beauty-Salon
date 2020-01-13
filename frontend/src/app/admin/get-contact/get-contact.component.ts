@@ -8,7 +8,7 @@ import {Router} from '@angular/router';
   styleUrls: ['./get-contact.component.css']
 })
 export class GetContactComponent implements OnInit {
-  private contact: any = {};
+  private contact: any = [];
 
   constructor(private service: AdminService, private router: Router) { }
 
@@ -17,11 +17,14 @@ export class GetContactComponent implements OnInit {
   }
   getContacts() {
     this.service.getContact().subscribe((data: any) => {
-      this.contact = data[0];
+      this.contact = data;
     });
   }
   deleteContact(id) {
     this.service.deleteContactPage(id).subscribe((data: any) => {
+      this.service.getContact().subscribe((res: any) => {
+        this.contact = res;
+      })
       console.log(data);
     });
   }

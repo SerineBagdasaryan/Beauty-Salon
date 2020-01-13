@@ -19,11 +19,12 @@ export class CreatePriceComponent implements OnInit {
     this.formPrice = this.fb.group({
       price: ['', Validators.required],
       serviceName: ['', Validators.required],
+      description: ['', Validators.required],
       discount: ['', Validators.required],
     });
   }
-  submitForm(price, serviceName, discount) {
-  this.service.createPrice(price, serviceName, discount).subscribe((data: any) => {
+  submitForm(price, serviceName, description,  discount) {
+  this.service.createPrice(price, serviceName,  description, discount).subscribe((data: any) => {
     console.log(data);
   });
   }

@@ -52,4 +52,4 @@ app.use(adminRouter);
 
 app.listen(3000, () => {
     console.log('App running at 3000')
-})
+});

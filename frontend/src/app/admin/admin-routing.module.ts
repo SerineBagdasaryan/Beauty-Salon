@@ -36,6 +36,7 @@ import {TeamMemberComponent} from './team-member/team-member.component';
 import {CreatePriceComponent} from './create-price/create-price.component';
 import {GetPriceComponent} from './get-price/get-price.component';
 import {CreateServiceComponent} from './create-service/create-service.component';
+import {CreateContactComponent} from "./create-contact/create-contact.component";
 
 const routes: Routes = [
   { path: 'admin', component: AdminComponent, canActivate: [AdminGuard], children: [
@@ -56,14 +57,15 @@ const routes: Routes = [
       {path: 'getService3', component: GetService3Component, canActivate: [AdminGuard]},
       {path: 'getfooter', component: GetFooterComponent, canActivate: [AdminGuard]},
       {path: 'createmenu', component: CreateMenuComponent, canActivate: [AdminGuard]},
+      {path: 'createContact', component: CreateContactComponent, canActivate: [AdminGuard]},
     ] },
   {path: 'editehome/:id', component: EditHomepageComponent, canActivate: [AdminGuard] },
   {path: 'editeteam/:id', component: EditeTeamComponent, canActivate: [AdminGuard]},
-  {path: 'editecontact', component: EditeContactComponent, canActivate: [AdminGuard]},
+  {path: 'editecontact/:id', component: EditeContactComponent, canActivate: [AdminGuard]},
   { path: 'adminSidebar', component: AdminSidebarComponent, canActivate: [AdminGuard]},
   { path: 'editemenu/:id', component: EditeMenuComponent, canActivate: [AdminGuard]},
   { path: 'editeprice/:id', component: EditePriceComponent, canActivate: [AdminGuard]},
-  { path: 'editeservice', component: EditeServiceComponent, canActivate: [AdminGuard]},
+  { path: 'editeservice/:id', component: EditeServiceComponent, canActivate: [AdminGuard]},
   { path: 'editeservice1', component: EditeService1Component, canActivate: [AdminGuard]},
   { path: 'editeservice2', component: EditeService2Component, canActivate: [AdminGuard]},
   { path: 'editeservice3', component: EditeService3Component, canActivate: [AdminGuard]},

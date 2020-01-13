@@ -1,28 +1,3 @@
-<!--<div class="container">-->
-<!--  <table class="container text-center"  border="1" *ngFor="let item of team">-->
-<!--  <tr>-->
-<!--    <td ><img src="../../../assets/img/{{ item.image}}" style="width: 100px; height: 100px" alt=""></td>-->
-<!--  </tr>-->
-<!--  <tr>-->
-<!--    <td> {{item.firstname}}</td>-->
-<!--  </tr>-->
-<!--  <tr>-->
-<!--    <td> {{item.lastname}}</td>-->
-<!--  </tr>-->
-<!--  <tr>-->
-<!--    <td> {{item.specialty}}</td>-->
-<!--  </tr>-->
-<!--  <tr>-->
-<!--    <td> {{item.description}}</td>-->
-<!--  </tr>-->
-<!--    <div class="form-group">-->
-<!--    <a [routerLink]="['/editeteam']" skipLocationChange class="btn btn-primary btn-block btn-lg">Edite Team </a>-->
-<!--    <a (click)="deleteTeampage(item.id)" class="btn btn-danger btn-block btn-lg">Delete Team</a>-->
-<!--  </div>-->
-<!--  </table><br>-->
-<!--</div>-->
-
-
 <div class="container">
   <table class="container text-center"  border="1">
     <tr *ngFor="let item of team,  let i = index">
@@ -32,8 +7,8 @@
       <td>{{ item.specialty }}</td>
       <td>{{ item.description }}</td>
       <td><img src="../../../assets/images/{{ item.image }}" style="width: 50px; height: 50px" alt=""></td>
-      <td><a [routerLink]="['/editeteam/', item.id]" skipLocationChange class="btn btn-primary btn-block">Edite Team </a></td>
-     <td><a (click)="deleteTeampage(item.id)" class="btn btn-danger btn-block">Delete Team</a></td>
+      <td><a [routerLink]="['/editeteam/', item.id]" skipLocationChange class="btn btn-primary ">Edite Team </a></td>
+     <td><a (click)="deleteTeampage(item.id)" class="btn btn-danger">Delete Team</a></td>
     </tr>
   </table>
 </div>

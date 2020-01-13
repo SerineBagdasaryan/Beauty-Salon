@@ -7,8 +7,7 @@ import {UserService} from '../user.service';
   styleUrls: ['./service.component.css']
 })
 export class ServiceComponent implements OnInit {
-  servicesData: any = {};
-  service1Data: any = {};
+  servicesData: any = [];
   service2: any = {};
   service3: any = {};
   imageServic: any = {};
@@ -22,8 +21,8 @@ export class ServiceComponent implements OnInit {
   }
   serviceData() {
     this.service.serviceData().subscribe((data: any) => {
-      this.servicesData = data[0];
-      // console.log(this.servicesData);
+      this.servicesData = data;
+      console.log(this.servicesData);
     });
   }
   imageService() {

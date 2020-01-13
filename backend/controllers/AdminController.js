@@ -167,7 +167,8 @@ exports.createPrice = function(req,res) {
  const price = req.body.price;
  const serviceName = req.body.serviceName;
  const discount = req.body.discount;
- db.query(`insert into prices (price,serviceName,discount) VALUES (?, ?, ?)`, [price, serviceName, discount], function (err, data) {
+ const description = req.body.description;
+ db.query(`insert into prices (price,serviceName,description, discount) VALUES (?, ?, ?, ?)`, [price, serviceName,description, discount], function (err, data) {
 if(err) return console.log(err);
 res.send(data);
  })
@@ -175,14 +176,15 @@ res.send(data);
 exports.multipleFiles = function(req,res) {
  console.log(req.files);
  if (req.files) {
-  let filename;
   req.files.forEach(function (file, index) {
-  filename = (new Date).valueOf() + "_" + file.originalname;
+   let filename = (new Date).valueOf() + "_" + file.originalname;
+  // console.log(filename);
    fs.rename(file.path, '../frontend/src/assets/images/' + filename, function (err) {
     if (err) throw err;
+    console.log(filename);
     db.query("INSERT INTO imagesWork (image) VALUES (?)", [filename], function (err,data) {
    if(err) return console.log(err);
-   console.log(data);
+  //  console.log(data);
   })
    });
   })
@@ -328,6 +330,17 @@ res.send(data);
 })
 }
 }
+exports.createContact = function(req,res) {
+ console.log(req.body);
+ const address = req.body.address;
+ const phone = req.body.phone;
+ const email = req.body.email;
+ const customerSupport = req.body.customerSupport;
+ db.query(`insert into contact (address, phone, email, customerSupport) values(?,?,?,?)`, [address,phone,email,customerSupport],function (err,data) {
+if(err) return console.log(err);
+res.send(data);
+ })
+}
 exports.getContact = function (req,res) {
 db.query(`select * from contact`, function (err,data) {
  if(err) return console.log(err);
@@ -335,25 +348,20 @@ db.query(`select * from contact`, function (err,data) {
 
 })
 }
+exports.editeContact = function(req,res) {
+ const id  = req.params.id;
+ db.query(`select *from contact where id=?` ,[id], function (err,data) {
+if(err) return console.log(err);
+res.send(data);
+ })
+}
 exports.updateContact  = function (req,res) {
- const text1 = req.body.text1;
- const text2 = req.body.text2;
- const text3 = req.body.text3;
- const text4 = req.body.text4;
- const text5 = req.body.text5;
- const text6 = req.body.text6;
- const text7 = req.body.text7;
- const text8 = req.body.text8;
- const text9= req.body.text9;
- const text10 = req.body.text10;
- const text11 = req.body.text11;
- const text12 = req.body.text12;
- const text13 = req.body.text13;
- const text14 = req.body.text14;
- const text15 = req.body.text15;
- const text16 = req.body.text16;
- const text17 = req.body.text17;
- db.query(`update contact set  text1=?, text2 = ?, text3 = ?, text4= ?, text5= ?, text6= ?,text7= ?, text8 = ?,text9 = ?,text10 = ?,text11 = ?,text12 = ?,text13 = ?,text14 = ?,text15 = ?,text16 = ?,text17 = ?`, [text1, text2, text3, text4, text5, text6, text7, text8, text9, text10, text11, text12, text13, text14, text15, text16, text17], function (err,data) {
+ const address = req.body.address;
+ const phone = req.body.phone;
+ const email = req.body.email;
+ const customerSupport = req.body.customerSupport;
+ const id  = req.body.id;
+ db.query(`update contact set  address=?, phone = ?, email = ?, customerSupport= ?  where id=?`, [ address, phone, email, customerSupport, id], function (err,data) {
   if(err) return console.log(err);
   res.send(data);
  })
@@ -369,10 +377,10 @@ exports.deleteTeamPage = function(req,res) {
 exports.deleteContact = function (req,res) {
 const id = req.params.id;
 console.log(id);
-// db.query(`delete from contact where id=?` , [id], function (err,data) {
-// if(err) return console.log(err);
-// res.send(data);
-// })
+db.query(`delete from contact where id=?` , [id], function (err,data) {
+if(err) return console.log(err);
+res.send(data);
+})
 }
 exports.getMenu = function (req,res) {
 db.query(`select * from menu`, function (err,data) {
@@ -425,8 +433,9 @@ exports.updateprice = function (req,res) {
  const price = req.body.price;
  const serviceName = req.body.serviceName;
  const discount = req.body.discount;
+ const description = req.body.description;
  const id = req.body.id;
- db.query(`update prices set price=?, serviceName = ?, discount = ? where id =?`, [price, serviceName, discount, id], function (err,data) {
+ db.query(`update prices set price=?, serviceName = ?, discount = ?, description=? where id =?`, [price, serviceName,description, discount, id], function (err,data) {
   if(err) return console.log(err);
   res.send(data);
 
@@ -452,6 +461,13 @@ exports.getService = function (req,res) {
  })
 
 }
+exports.editeService = function(req,res) {
+ const id  = req.params.id;
+ db.query("select * from service where id=?", [id], function (err,data) {
+if(err) return console.log(err);
+res.send(data);
+ })
+}
 exports.deleteService = function (req,res) {
 const id  = req.params.id;
 console.log(id);
@@ -462,22 +478,31 @@ console.log(id);
 }
 
 exports.updateservice = function (req,res) {
- const text1 = req.body.text1;
- const text2 = req.body.text2;
- const text3 = req.body.text3;
- const text4 = req.body.text4;
- const text5 = req.body.text5;
- const text6 = req.body.text6;
- const text7 = req.body.text7;
- const text8 = req.body.text8;
- const text9= req.body.text9;
- const text10 = req.body.text10;
- db.query(`update service set text1=?, text2 = ?, text3 = ?, text4= ?, text5= ?, text6= ?,text7= ?, text8 = ?,text9 = ?,text10 = ?`, [text1, text2, text3, text4, text5, text6, text7, text8, text9, text10], function (err,data) {
-  if(err) return console.log(err);
-  res.send(data);
-
- })
-
+ const id = req.body.id;
+ const title = req.body.title;
+ const description = req.body.description;
+ const imageName = req.body.imageName;
+ const files = req.files;
+ console.log(files);
+ console.log(req.body);
+ if(files) {
+  let filename;
+  files.forEach(function (file) {
+   filename = (new Date).valueOf() + "_" + file.originalname;
+   fs.rename(file.path, '../frontend/src/assets/images/' + filename, function (err) {
+    if (err) throw err;
+   });
+  })
+  db.query(`update service set title=?, description= ?, image=? where id=?`, [title, description, filename, id], function (err, data) {
+   if (err) return console.log(err);
+   res.send(data);
+  })
+ } else {
+  db.query(`update service set title=?, description= ?, image=? where id=?`, [title, description, imageName, id], function (err, data) {
+   if (err) return console.log(err);
+   res.send(data);
+  })
+ }
 }
 exports.getService1= function (req,res) {
 db.query(`select * from service1`, function (err,data) {

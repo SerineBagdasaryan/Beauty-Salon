@@ -1,60 +1,51 @@
-<section class="banner-area" id="home">
-<div class="container">
-  <div class="row d-flex justify-content-center">
-    <div class="menu-content pb-70 col-lg-8">
-      <div class="title text-center">
-        <h1 class="mb-10">{{servicesData.text1}}</h1>
-        <p>{{servicesData.text2}}</p>
+<section class="service-area section-gap" id="service">
+  <div class="container">
+    <div class="row d-flex justify-content-center">
+      <div class="menu-content pb-70 col-lg-8">
+        <div class="title text-center">
+          <h1 class="mb-10">What We Can Do for You</h1>
+          <p>Who are in extremely love with eco friendly system.</p>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="single-service col-lg-6 col-md-6 d-flex flex-row mb-30" *ngFor="let item of servicesData" >
+        <div class="icon">
+          <img src="../../assets/images/{{item.image}}" alt="">
+        </div>
+        <div class="dec">
+          <h4><a href="#">{{item.title}}</a></h4>
+          <p class="mt-20">
+           {{item.description}}
+          </p>
+        </div>
       </div>
     </div>
   </div>
-  <div class="row">
-    <div class="single-service col-lg-6 col-md-6 d-flex flex-row mb-30">
-      <div class="icon">
-        <img src="../../assets/img/{{servicesData.image1}}" alt="">
-      </div>
-      <div class="dec">
-        <h4><a href="">{{servicesData.text3}}</a></h4>
-        <p class="mt-20">
-          {{servicesData.text4}}
-        </p>
-      </div>
-    </div>
-    <div class="single-service col-lg-6 col-md-6 d-flex flex-row mb-30">
-      <div class="icon">
-        <img src="../../assets/img/{{servicesData.image2}}"  alt="">
-      </div>
-      <div class="dec">
-        <h4><a href="#">{{servicesData.text5}}</a></h4>
-        <p class="mt-20">
-          {{servicesData.text6}}
-        </p>
-      </div>
-    </div>
-    <div class="single-service col-lg-6 col-md-6 d-flex flex-row">
-      <div class="icon">
-        <img src="../../assets/img/{{servicesData.image3}}" alt="">
-      </div>
-      <div class="dec">
-        <h4><a href="#">{{servicesData.text7}}</a></h4>
-        <p class="mt-20">
-          {{servicesData.text8}}
-        </p>
-      </div>
-    </div>
-    <div class="single-service col-lg-6 col-md-6 d-flex flex-row">
-      <div class="icon">
-        <img src="../../assets/img/{{servicesData.image4}}" alt="">
-      </div>
-      <div class="dec">
-        <h4><a href="#">{{servicesData.text9}}</a></h4>
-        <p class="mt-20">
-          {{servicesData.text10}}
-        </p>
-      </div>
-    </div>
-  </div>
-</div>
+</section>
+<!--<section class="banner-area" id="home">-->
+<!--<div class="container">-->
+<!--  <div class="row d-flex justify-content-center">-->
+<!--    <div class="menu-content pb-70 col-lg-8">-->
+<!--      <div class="title text-center">-->
+<!--        <h1 class="mb-10 text-white">What We Can Do for You</h1>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--  <div class="row" *ngFor="let item of servicesData">-->
+<!--    <div class="single-service col-lg-6 col-md-6 d-flex flex-row mb-30">-->
+<!--      <div class="icon">-->
+<!--        <img src="../../assets/images/{{item.image}}" style="width: 70px" alt="">-->
+<!--      </div>-->
+<!--      <div class="dec">-->
+<!--        <h4><a href="">{{item.title}}</a></h4>-->
+<!--        <p class="mt-20">-->
+<!--          {{item.description}}-->
+<!--        </p>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</div>-->
 <section class="gallery-area">
   <div class="container-fluid">
     <div class="row no-padding">
@@ -112,7 +103,7 @@
     </div>
   </div>
 </section>
-<!-- End gallery Area -->
+<!--&lt;!&ndash; End gallery Area &ndash;&gt;-->
 
 
 <!-- Start feature Area -->
@@ -218,5 +209,4 @@
       </div>
     </div>
   </div>
-</section>
 </section>

@@ -16,14 +16,48 @@
   </div>
 </div>
 <div class="about-wrapper" id="about">
-  <div class="about">z
-    <h3>{{homeData.text1}} <span class="pink"></span></h3>
+  <div class="about">
     <p class="featured-text pink">
       {{homeData.aboutSalon}}
     </p>
   </div>
-  <div class="container container-fluid" *ngFor="let item of images">
-  <img class="about-img" src="../../assets/images/{{item.image}}">
+</div>
+
+
+
+<!--  &lt;!&ndash; Start gallery Area &ndash;&gt;-->
+<!--  <section class="gallery-area">-->
+<!--    <div class="container-fluid"    *ngFor="let item of images">-->
+<!--      <div class="row no-padding">-->
+<!--        <div class="active-gallery">-->
+<!--          <div class="item single-gallery" >-->
+<!--            <div class="thumb">-->
+<!--              <img src="../../assets/images/{{item.image}}" alt="">-->
+<!--              <div class="align-items-center justify-content-center d-flex">-->
+<!--              </div>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </section>-->
+
+
+  <!--  <div class="d-flex justify-content-around bg-white">-->
+<!--    <div class="" *ngFor="let item of images">-->
+<!--        <img style="width: 250px" class="about-img" src="../../assets/images/{{item.image}}">-->
+<!--    </div>-->
+<!--  </div>-->
+</section>
+
+<div class="team-area section-gap">
+  <div class="container" >
+    <div class="row justify-content-center d-flex align-items-center" >
+      <div class="col-lg-3 col-md-6"  *ngFor="let item of images">
+        <div class="thumb">
+          <img class="img-fluid" src="../../assets/images/{{item.image}}" alt="">
+        </div>
+      </div>
+    </div>
   </div>
 </div>
-</section>

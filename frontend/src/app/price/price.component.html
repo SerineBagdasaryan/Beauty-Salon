@@ -1,104 +1,36 @@
-<section class="banner-area" id="home">
 <section class="price-area section-gap" id="price">
   <div class="container">
     <div class="row d-flex justify-content-center">
       <div class="menu-content pb-60 col-lg-8">
         <div class="title text-center">
-          <h1 class="mb-10">{{price.text1}}</h1>
-          <p>{{price.text2}}</p>
+          <h1 class="mb-10">Choose the Perfect Plan for you</h1>
+          <p>Who are in extremely love with eco friendly system.</p>
         </div>
       </div>
     </div>
     <div class="row">
-      <div class="col-lg-4">
+      <div class="col-lg-4"  *ngFor="let item of price">
         <div class="single-price">
           <div class="top-sec d-flex justify-content-between">
             <div class="top-left">
-              <h4>{{price.text3}}</h4>
-              <p>{{price.text4}}</p>
+              <h4>{{item.serviceName}}</h4>
             </div>
             <div class="top-right">
-              <h1>{{price.text5}}</h1>
+              <h1>{{item.price}}</h1>
             </div>
           </div>
           <div class="bottom-sec">
             <p>
-              {{price.text6}}
+{{item.description}}
             </p>
           </div>
           <div class="end-sec">
-            <ul>
-              <li>{{price.text7}}</li>
-              <li>{{price.text8}}</li>
-              <li>{{price.text9}}</li>
-              <li>{{price.text10}}</li>
-              <li>{{price.text11}}</li>
-            </ul>
-            <button class="primary-btn price-btn mt-20">{{price.text12}}<span class="lnr lnr-arrow-right"></span></button>
-          </div>
-        </div>
-      </div>
-
-
-
-      <div class="col-lg-4">
-        <div class="single-price">
-          <div class="top-sec d-flex justify-content-between">
-            <div class="top-left">
-              <h4>{{prices.text1}}</h4>
-              <p>{{prices.text2}}</p>
-            </div>
-            <div class="top-right">
-              <h1>{{prices.text3}}</h1>
-            </div>
-          </div>
-          <div class="bottom-sec">
-            <p>
-              {{prices.text4}}
-            </p>
-          </div>
-          <div class="end-sec">
-            <ul>
-              <li>{{prices.text5}}</li>
-              <li>{{prices.text6}}</li>
-              <li>{{prices.text7}}</li>
-              <li>{{prices.text8}}</li>
-              <li>{{prices.text9}}</li>
-            </ul>
-            <button class="primary-btn price-btn mt-20">{{prices.text10}}<span class="lnr lnr-arrow-right"></span></button>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4">
-        <div class="single-price">
-          <div class="top-sec d-flex justify-content-between">
-            <div class="top-left">
-              <h4>{{prices3.text1}}</h4>
-              <p>{{prices3.text2}}</p>
-            </div>
-            <div class="top-right">
-              <h1>{{prices3.text3}}</h1>
-            </div>
-          </div>
-          <div class="bottom-sec">
-            <p>
-              {{prices3.text4}}
-            </p>
-          </div>
-          <div class="end-sec">
-            <ul>
-              <li>{{prices3.text5}}</li>
-              <li>{{prices3.text6}}</li>
-              <li>{{prices3.text7}}</li>
-              <li>{{prices3.text8}}</li>
-              <li>{{prices3.text9}}</li>
-            </ul>
-            <button class="primary-btn price-btn mt-20">{{prices3.text10}}<span class="lnr lnr-arrow-right"></span></button>
+            {{item.discount}}
+            <button class="primary-btn price-btn mt-20">Purchase Plan<span class="lnr lnr-arrow-right"></span></button>
           </div>
         </div>
       </div>
 
     </div>
   </div>
-</section>
 </section>

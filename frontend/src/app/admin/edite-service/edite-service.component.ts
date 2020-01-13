@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {AdminService} from '../admin.service';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
+import {ActivatedRoute} from '@angular/router';
 
 @Component({
   selector: 'app-edite-service',
@@ -10,31 +11,43 @@ import {FormBuilder, FormGroup, Validators} from '@angular/forms';
 export class EditeServiceComponent implements OnInit {
   serviceForm: FormGroup;
   services: any = {};
-  constructor(private service: AdminService, private fb: FormBuilder ) {
+  constructor(private service: AdminService, private fb: FormBuilder, private route: ActivatedRoute) {
     this.createForm();
   }
   createForm() {
     this.serviceForm = this.fb.group({
-      text1: ['', Validators.required],
-      text2: ['', Validators.required],
-      text3: ['', Validators.required],
-      text4: ['', Validators.required],
-      text5: ['', Validators.required],
-      text6: ['', Validators.required],
-      text7: ['', Validators.required],
-      text8: ['', Validators.required],
-      text9: ['', Validators.required],
-      text10: ['', Validators.required],
+      title: ['', Validators.required],
+      description: ['', Validators.required],
+      imageName: ['', Validators.required],
+      image: [null],
   });
   }
-  updateService(text1, text2, text3, text4, text5, text6, text7, text8, text9, text10) {
-    this.service.updateService(text1, text2, text3, text4, text5, text6, text7, text8, text9, text10).subscribe((data: any) => {
-      console.log(data);
+  uploadFile(event) {
+    const file = (event.target as HTMLInputElement).files[0];
+    this.serviceForm.patchValue({
+      image: file
+    });
+    this.serviceForm.get('image').updateValueAndValidity();
+  }
+  submitForm() {
+    this.route.params.subscribe(params => {
+      const formData: any = new FormData();
+      formData.append('title', this.serviceForm.get('title').value);
+      formData.append('description', this.serviceForm.get('description').value);
+      formData.append('imageName', this.serviceForm.get('imageName').value);
+      formData.append('id', params.id);
+      formData.append('image', this.serviceForm.get('image').value);
+      this.service.updateService(formData).subscribe((data: any) => {
+        console.log(data);
+      });
     });
   }
   ngOnInit() {
-    this.service.getservice().subscribe((data: any) => {
-      this.services = data[0];
+    this.route.params.subscribe(params => {
+      this.service.editeService(params.id).subscribe((res: any) => {
+        this.services = res[0];
+        console.log(res);
+      });
     });
   }
 

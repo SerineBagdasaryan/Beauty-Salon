@@ -7,7 +7,7 @@ import {UserService} from '../user.service';
   styleUrls: ['./contact.component.css']
 })
 export class ContactComponent implements OnInit {
-private contact: any = {};
+private contact: any = [];
   constructor(private service: UserService) { }
 
   ngOnInit() {
@@ -15,7 +15,8 @@ private contact: any = {};
   }
   contacts() {
     this.service.contact().subscribe((data: any) => {
-  this.contact = data[0];
+  this.contact = data;
+  console.log(this.contact);
     });
   }
 }

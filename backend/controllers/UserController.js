@@ -390,7 +390,7 @@ res.send(data);
 
 exports.getImage = function (req,res) {
     let id = getUserId(req,res);
-    db.query(`select *from users where id=?`, [id], function (err,data) {
+    db.query(`select * from users where id=?`, [id], function (err,data) {
 if(err) return console.log(err);
 console.log(data);
 res.send(data);

@@ -12,6 +12,7 @@ import {HttpClient} from '@angular/common/http';
 export class EditHomepageComponent implements OnInit {
   private data: any = {};
   homeForm: FormGroup;
+  private images;
   constructor(private fb: FormBuilder, private router: Router, private route: ActivatedRoute, private service: AdminService) {
     this.createForm();
   }
@@ -23,7 +24,7 @@ export class EditHomepageComponent implements OnInit {
       buttonText: ['', Validators.required],
       aboutSalon: ['', Validators.required],
       imageName: ['', Validators.required],
-      image: [null],
+      // image: [null],
     });
   }
   ngOnInit() {
@@ -35,10 +36,11 @@ export class EditHomepageComponent implements OnInit {
 
   uploadFile(event) {
     const file = (event.target as HTMLInputElement).files[0];
-    this.homeForm.patchValue({
-      image: file
-    });
-    this.homeForm.get('image').updateValueAndValidity();
+    this.images = file;
+    // this.homeForm.patchValue({
+    //   image: file
+    // });
+    // this.homeForm.get('image').updateValueAndValidity();
   }
   submitForm() {
     const formData: any = new FormData();
@@ -47,7 +49,7 @@ export class EditHomepageComponent implements OnInit {
     formData.append('buttonText', this.homeForm.get('buttonText').value);
     formData.append('aboutSalon', this.homeForm.get('aboutSalon').value);
     formData.append('imageName', this.homeForm.get('imageName').value);
-    formData.append('image', this.homeForm.get('image').value);
+    formData.append('file', this.images);
     this.service.updateHomePage(formData).subscribe((data: any) => {
       console.log(data);
     });

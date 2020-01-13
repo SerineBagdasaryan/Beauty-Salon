@@ -18,13 +18,14 @@ createForm() {
     this.priceForm = this.fb.group({
       price: ['', Validators.required],
       serviceName: ['', Validators.required],
+      description: ['', Validators.required],
       discount: ['', Validators.required],
 
     });
 }
-  updatePrice(price, serviceName, discount) {
+  updatePrice(price, serviceName, description, discount) {
     this.route.params.subscribe(params => {
-      this.service.updateprice(price, serviceName, discount, params.id).subscribe((data: any) => {
+      this.service.updateprice(price, serviceName, description, discount, params.id).subscribe((data: any) => {
         console.log(data);
       });
     });

@@ -15,5 +15,11 @@
         </introspection-scope>
       </schema-mapping>
     </data-source>
+    <data-source name="salon@localhost [2]" uuid="94cc2c33-7118-4886-a35e-c8cfd8e614db">
+      <database-info product="" version="" jdbc-version="" driver-name="" driver-version="" dbms="MYSQL" exact-version="0" />
+      <secret-storage>master_key</secret-storage>
+      <user-name>developer</user-name>
+      <schema-mapping />
+    </data-source>
   </component>
 </project>

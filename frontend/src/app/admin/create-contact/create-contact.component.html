@@ -1,0 +1,21 @@
+
+<div class="container">
+  <form [formGroup]="formContact">
+    <div class="form-group input-group-lg">
+      <input class="form-control" placeholder="Address" formControlName="address" #address>
+    </div>
+    <div class="form-group input-group-lg">
+      <input class="form-control" placeholder="Phone" formControlName="phone" #phone>
+    </div>
+    <div class="form-group input-group-lg">
+      <input class="form-control" placeholder="Email" formControlName="email" #email>
+    </div>
+    <div class="form-group input-group-lg">
+      <input class="form-control" placeholder="Customer Support" formControlName="customerSupport" #customerSupport>
+    </div>
+    <div class="form-group">
+      <button  (click)="submitForm(address.value,phone.value,email.value, customerSupport.value);address.value = ''; phone.value = ''; email.value= '';customerSupport.value ='' " class="btn btn-primary btn-block btn-lg">Create contact</button>
+    </div>
+  </form>
+</div>
+

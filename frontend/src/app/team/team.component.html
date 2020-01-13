@@ -1,18 +1,17 @@
-<section class="banner-area" id="home">
 <section class="team-area section-gap" id="team">
   <div class="container">
     <div class="row d-flex justify-content-center">
       <div class="menu-content pb-70 col-lg-8">
         <div class="title text-center">
-<!--          <h1 class="mb-10">{{team.firstname}}</h1>-->
-<!--          <p>{{team.lastname}}</p>-->
+          <h1 class="mb-10">Experienced Mentor Team</h1>
+          <p>Who are in extremely love with eco friendly system.</p>
         </div>
       </div>
     </div>
-    <div class="row justify-content-center d-flex align-items-center" *ngFor="let item of team">
-      <div class="col-lg-3 col-md-6 single-team">
+    <div class="row justify-content-center d-flex align-items-center">
+      <div class="col-lg-3 col-md-6 single-team" *ngFor="let item of team">
         <div class="thumb">
-          <img  class="img-fluid" width="50px" src="../../../assets/images/{{item.image}}">
+          <img class="img-fluid" src="../../assets/images/{{item.image}}" alt="">
           <div class="align-items-center justify-content-center d-flex">
             <a href="#"><i class="fa fa-facebook"></i></a>
             <a href="#"><i class="fa fa-twitter"></i></a>
@@ -20,13 +19,12 @@
           </div>
         </div>
         <div class="meta-text mt-30 text-center">
-          <h4>{{item.firstname}}</h4>
-          <h4>{{item.lastname}}</h4>
-          <p>{{item.description}}</p>
+          <h4>{{item.firstname}}{{item.lastname}}</h4>
           <p>{{item.specialty}}</p>
+          <p>{{item.description}}</p>
         </div>
       </div>
     </div>
   </div>
 </section>
-</section>
+

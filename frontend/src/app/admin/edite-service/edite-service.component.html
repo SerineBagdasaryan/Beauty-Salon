@@ -1,38 +1,23 @@
-<div class="container">
+<div class="container mt-3">
 <form [formGroup]="serviceForm" class="ml-5">
   <div class="form-group input-group-lg">
-  <input type="text"  class="form-control" formControlName="text1" #text1 [(ngModel)]="services.text1">
+  <input type="text"  class="form-control" formControlName="title" #title [(ngModel)]="services.title">
   </div>
   <div class="form-group input-group-lg">
-  <input type="text"class="form-control" formControlName="text2" #text2 [(ngModel)]="services.text2">
+  <input type="text"class="form-control" formControlName="description" #description [(ngModel)]="services.description">
+  </div>
+
+  <div class="form-group input-group-lg">
+    <input type="text"  class="form-control" formControlName="imageName" #imageName [(ngModel)]="services.image">
   </div>
   <div class="form-group input-group-lg">
-  <input type="text" class="form-control" formControlName="text3" #text3 [(ngModel)]="services.text3">
-  </div>
-  <div class="form-group input-group-lg">
-  <input type="text" class="form-control" formControlName="text4" #text4 [(ngModel)]="services.text4">
-  </div>
-  <div class="form-group input-group-lg">
-  <input type="text" class="form-control"formControlName="text5" #text5 [(ngModel)]="services.text5">
-  </div>
-  <div class="form-group input-group-lg">
-  <input type="text" class="form-control" formControlName="text6" #text6 [(ngModel)]="services.text6">
-  </div>
-  <div class="form-group input-group-lg">
-  <input type="text" class="form-control" formControlName="text7" #text7 [(ngModel)]="services.text7">
-  </div>
-  <div class="form-group input-group-lg">
-  <input type="text"  class="form-control" formControlName="text8" #text8 [(ngModel)]="services.text8">
-  </div>
-  <div class="form-group input-group-lg">
-  <input type="text" class="form-control" formControlName="text9" #text9 [(ngModel)]="services.text9">
-  </div>
-  <div class="form-group input-group-lg">
-  <input type="text" class="form-control" formControlName="text10" #text10 [(ngModel)]="services.text10">
+    <img src="../../../assets/images/{{services.image}}" style="width: 100px; height: 100px" alt="">
   </div>
   <div class="form-group">
-  <button class="btn btn-primary btn-block btn-lg" (click)="updateService(text1.value,text2.value,text3.value,text4.value,text5.value,text6.value, text7.value,text8.value,text9.value,text10.value)">Update service</button>
-
+    <input type="file" (change)="uploadFile($event)">
+  </div>
+  <div class="form-group">
+    <button  (click)="submitForm()" class="btn btn-primary  btn-lg">Update Servicepage</button>
   </div>
 </form>
 </div>

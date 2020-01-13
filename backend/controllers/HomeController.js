@@ -21,8 +21,3 @@ if(err) return console.log(err);
 res.send(data);
 })
 }
-
-exports.logout = function (req,res) {
-localStorage.removeItem('token');
-res.send('removed');
-}

@@ -3,6 +3,7 @@
     <tr *ngFor="let item of prices,  let i = index">
       <td>{{i+1}}</td>
       <td >{{ item.price }}</td>
+      <td>{{ item.description }}</td>
       <td>{{ item.serviceName }}</td>
       <td>{{ item.discount }}</td>
       <td><a [routerLink]="['/editeprice/', item.id]" skipLocationChange class="btn btn-primary btn-block">Edite Price </a></td>

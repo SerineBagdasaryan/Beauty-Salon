@@ -32,13 +32,6 @@ export class AdminService {
   editHome() {
     return this.http.get(`${this.url}/editHome`);
   }
-  // updateHome(textInfo, textInfo1, buttonText, text1, text2, text3, text4) {
-  //   const obj = {
-  //     textInfo, textInfo1, buttonText, text1, text2, text3, text4
-  //   };
-  //   // @ts-ignore
-  //   return this.http.post(`${this.url}/updateHome`, obj);
-  // }
 
   deleteHomepage(id) {
     console.log(id);
@@ -53,16 +46,22 @@ export class AdminService {
   updateTeam(formData) {
     return this.http.post(`${this.url}/updateTeam`, formData);
   }
+  createContactData(address, phone, email, customerSupport) {
+    const obj = { address, phone, email, customerSupport };
+    return this.http.post(`${this.url}/createContact`, obj);
+  }
   getContact() {
     return this.http.get(`${this.url}/getContact`);
   }
   // tslint:disable-next-line:max-line-length
-  updateContact(text1, text2, text3, text4, text5, text6, text7, text8, text9, text10, text11, text12, text13, text14, text15, text16, text17) {
+  updateContact(address, phone, email, customerSupport, id) {
     // tslint:disable-next-line:max-line-length
-    const obj = { text1, text2, text3, text4, text5, text6, text7, text8, text9, text10, text11, text12, text13, text14, text15, text16, text17};
+    const obj = { address, phone, email, customerSupport, id};
     return this.http.post(`${this.url}/updateContact`, obj);
   }
-
+  editeContact(id) {
+    return this.http.get(`${this.url}/editeContact/${id}`);
+  }
   deleteContactPage(id) {
     return this.http.get(`${this.url}/daleteContactPage/${id}`);
   }
@@ -95,8 +94,8 @@ export class AdminService {
   editePrice(id) {
     return this.http.get(`${this.url}/editePrice/${id}`);
   }
-  updateprice(price, serviceName, discount, id) {
-    const obj = {price, serviceName, discount, id};
+  updateprice(price, serviceName, description, discount, id) {
+    const obj = {price, serviceName, description, discount, id};
     return this.http.post(`${this.url}/updateprice`, obj);
   }
   deleteprice(id) {
@@ -108,9 +107,11 @@ getservice() {
 deleteService(id) {
     return this.http.get(`${this.url}/deleteService/${id}`);
 }
-  updateService(text1, text2, text3, text4, text5, text6, text7, text8, text9, text10) {
-    const obj = {text1, text2, text3, text4, text5, text6, text7, text8, text9, text10};
-    return this.http.post(`${this.url}/updateservice`, obj);
+  updateService(formData) {
+    return this.http.post(`${this.url}/updateservice`, formData);
+  }
+  editeService(id) {
+    return this.http.get(`${this.url}/editeService/${id}`);
   }
   getservice1() {
     return this.http.get(`${this.url}/getService1`);
@@ -178,8 +179,8 @@ deleteService(id) {
   createTeamMember(formData) {
     return this.http.post(`${this.url}/createTeamMember`, formData);
   }
-  createPrice(price, serviceName, discount) {
-    const obj = { price, serviceName, discount};
+  createPrice(price, serviceName, description, discount) {
+    const obj = { price, serviceName, description, discount};
     return this.http.post(`${this.url}/createPrice`, obj);
   }
   createService(formData) {
