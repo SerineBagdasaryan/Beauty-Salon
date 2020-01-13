@@ -17,6 +17,9 @@ export class AdminHeaderComponent implements OnInit {
     window.location.href = '/login';
     // this.router.navigate(['login']);
   }
+  myAccount() {
+    this.router.navigate(['myAccount']);
+  }
   ngOnInit() {
     this.getImageAdmin();
   }

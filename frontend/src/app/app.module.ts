@@ -22,6 +22,7 @@ import { ForgotpasswordComponent } from './forgotpassword/forgotpassword.compone
 import { ChangepasswordComponent } from './changepassword/changepassword.component';
 import { SocialLoginModule, AuthServiceConfig, FacebookLoginProvider, GoogleLoginProvider } from 'angularx-social-login';
 import {AdminModule} from './admin/admin.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 const config = new AuthServiceConfig([
   {
@@ -65,6 +66,7 @@ export function provideConfig() {
     ReactiveFormsModule.withConfig({warnOnNgModelWithFormControl: 'never'}),
     HttpClientModule,
     AdminModule,
+    BrowserAnimationsModule,
   ],
   // tslint:disable-next-line:max-line-length
   providers: [{ provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true , },   {

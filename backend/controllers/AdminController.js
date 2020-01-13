@@ -119,14 +119,14 @@ exports.updateHomePagedata = function(req,res) {
 //  }
 }
 exports.updateHomePage = function(req,res) {
- console.log(req.files, 'f');
+ console.log(req.files.length, 'f');
  console.log(req.body);
 const textInfo = req.body.textInfo;
  const textInfo1 = req.body.textInfo1;
  const buttonText = req.body.buttonText;
  const aboutSalon = req.body.aboutSalon;
  const imageName = req.body.imageName;
- if(req.files) {
+ if(req.files.length > 0) {
   let filename;
   req.files.forEach(function (file, index) {
    filename = (new Date).valueOf() + "_" + file.originalname;
@@ -240,6 +240,17 @@ exports.updateImagesWork = function(req,res) {
 
 exports.deleteImagesWork =  function(req,res) {
  const id  = req.params.id;
+ let imageName;
+ db.query('select image from imagesWork where id=?', [id], function (err,data) {
+if(err) return console.log(err);
+imageName = data[0].image;
+console.log(imageName);
+const path = '../frontend/src/assets/images/' + imageName;
+  fs.unlink(path, function (err) {
+   if (err) throw err;
+   console.log('File deleted!');
+  });
+ })
  console.log(id);
  db.query(`delete from imagesWork where id = ?`, [id], function (err,data) {
 if(err) return console.log(err);
@@ -316,7 +327,7 @@ const specialty = req.body.specialty;
 const description = req.body.description;
 const id  = req.body.id;
 const imageName = req.body.imageName;
-if(req.files) {
+if(req.files.length > 0) {
  let filename;
  req.files.forEach(function (file) {
   filename = (new Date).valueOf() + "_" + file.originalname;
@@ -328,8 +339,15 @@ if(req.files) {
 if(err) return console.log(err);
 res.send(data);
 })
+}else {
+ db.query("UPDATE team SET firstname=?, lastname = ?, specialty = ?, description= ?, image= ? where id=?", [firstname, lastname, specialty, description,imageName, id], function (err,data) {
+  if(err) return console.log(err);
+  res.send(data);
+ })
 }
+
 }
+
 exports.createContact = function(req,res) {
  console.log(req.body);
  const address = req.body.address;
@@ -482,12 +500,10 @@ exports.updateservice = function (req,res) {
  const title = req.body.title;
  const description = req.body.description;
  const imageName = req.body.imageName;
- const files = req.files;
- console.log(files);
  console.log(req.body);
- if(files) {
+ if(req.files.length > 0) {
   let filename;
-  files.forEach(function (file) {
+  req.files.forEach(function (file) {
    filename = (new Date).valueOf() + "_" + file.originalname;
    fs.rename(file.path, '../frontend/src/assets/images/' + filename, function (err) {
     if (err) throw err;

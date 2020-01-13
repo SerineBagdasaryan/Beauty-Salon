@@ -1,5 +1,6 @@
 <div class="main-container-fluid">
   <app-admin-header></app-admin-header>
+
   <!-- LEFT-CONTAINER -->
   <div class="row">
   <div class="left-container container col-md-2">
@@ -8,15 +9,15 @@
       <ul class="menu-box-menu">
         <li>
           <a style="text-align: center" [routerLink]="['users']"  skipLocationChange class="menu-box-tab">All users</a>
-          <a style="text-align: center" [routerLink]="['createmenu']"  skipLocationChange class="menu-box-tab">Create Menu</a>
+<!--          <a style="text-align: center" [routerLink]="['createmenu']"  skipLocationChange class="menu-box-tab">Create Menu</a>-->
+          <a style="text-align: center" [routerLink] ="['getMenu']" skipLocationChange class="menu-box-tab"> Get Menu page</a>
+          <a style="text-align: center" [routerLink] ="['homepages']"  skipLocationChange class="menu-box-tab">Home page</a>
           <a style="text-align: center" [routerLink]="['createImageWork']"  skipLocationChange class="menu-box-tab">Upload Image Work</a>
           <a style="text-align: center" [routerLink]="['getImageWork']"  skipLocationChange class="menu-box-tab">Get Image Work</a>
           <a style="text-align: center" [routerLink] ="['createTeamMember']"  skipLocationChange class="menu-box-tab">Create team member</a>
-          <a style="text-align: center" [routerLink] ="['homepages']"  skipLocationChange class="menu-box-tab">Home page</a>
-          <a style="text-align: center" [routerLink] ="['getTeam']"  skipLocationChange class="menu-box-tab">Team page</a>
+          <a style="text-align: center" [routerLink] ="['getTeam']"  skipLocationChange class="menu-box-tab"> Get Team page</a>
           <a style="text-align: center" [routerLink] ="['createContact']"  skipLocationChange class="menu-box-tab">Create Contact</a>
-          <a style="text-align: center" [routerLink] ="['getContact']"  skipLocationChange class="menu-box-tab">Contact page</a>
-          <a style="text-align: center" [routerLink] ="['getMenu']" skipLocationChange class="menu-box-tab">Menu page</a>
+          <a style="text-align: center" [routerLink] ="['getContact']"  skipLocationChange class="menu-box-tab">Get Contact page</a>
           <a style="text-align: center" [routerLink] ="['createPrice']"  skipLocationChange class="menu-box-tab">Create Price page</a>
           <a style="text-align: center" [routerLink] ="['getPrice']"  skipLocationChange class="menu-box-tab">Get Price page</a>
           <a style="text-align: center" [routerLink] ="['createService']"  skipLocationChange class="menu-box-tab">Create service</a>

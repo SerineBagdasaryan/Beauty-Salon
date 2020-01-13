@@ -50,6 +50,11 @@
 .icon-cloudy2:before {
   content: "\e611";
 }
+
+
+.account {
+  cursor: pointer;
+}
 /************************************* END FONTS *************************************/
 
 * {

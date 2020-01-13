@@ -36,6 +36,7 @@ import { CreatePriceComponent } from './create-price/create-price.component';
 import { GetPriceComponent } from './get-price/get-price.component';
 import { CreateServiceComponent } from './create-service/create-service.component';
 import { CreateContactComponent } from './create-contact/create-contact.component';
+import {DragDropModule} from '@angular/cdk/drag-drop';
 
 
 
@@ -46,6 +47,7 @@ import { CreateContactComponent } from './create-contact/create-contact.componen
         CommonModule,
         AdminRoutingModule,
         FormsModule,
+      DragDropModule,
       ReactiveFormsModule.withConfig({warnOnNgModelWithFormControl: 'never'}),
     ],
   exports: [AdminComponent, AdminHeaderComponent, AdminFooterComponent, AdminSidebarComponent
