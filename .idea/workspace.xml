@@ -5,20 +5,15 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/controllers/AdminController.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/controllers/AdminController.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/routes/adminRoutes.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/routes/adminRoutes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/angular.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/admin/admin-header/admin-header.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/admin/admin-header/admin-header.component.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/app/admin/admin-header/admin-header.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/admin/admin-header/admin-header.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/admin/admin-header/admin-header.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/admin/admin-header/admin-header.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/admin/admin.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/admin/admin.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/admin/admin/admin.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/admin/admin/admin.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/admin/admin.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/admin/admin.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/app/admin/get-menu/get-menu.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/admin/get-menu/get-menu.component.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/app/admin/get-menu/get-menu.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/admin/get-menu/get-menu.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/main.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/admin/get-menu/get-menu.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/admin/get-menu/get-menu.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/app.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/login/login.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/login/login.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/images/1578904821617_g5.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/images/1578904821617_g6.jpg" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -252,7 +247,9 @@
       <workItem from="1578822088182" duration="21958000" />
       <workItem from="1578856100871" duration="1535000" />
       <workItem from="1578892380959" duration="373000" />
-      <workItem from="1578902971293" duration="7268000" />
+      <workItem from="1578902971293" duration="14478000" />
+      <workItem from="1578930662624" duration="2471000" />
+      <workItem from="1578977559128" duration="739000" />
     </task>
     <servers />
   </component>
@@ -296,10 +293,10 @@
       <screen x="47" y="27" width="1319" height="741" />
     </state>
     <state x="70" y="27" width="1230" height="470" key="com.intellij.history.integration.ui.views.FileHistoryDialog/47.27.1319.741@47.27.1319.741" timestamp="1578679253914" />
-    <state x="362" y="224" key="com.intellij.ide.util.TipDialog" timestamp="1578902972684">
+    <state x="362" y="224" key="com.intellij.ide.util.TipDialog" timestamp="1578977979445">
       <screen x="47" y="27" width="1319" height="741" />
     </state>
-    <state x="362" y="224" key="com.intellij.ide.util.TipDialog/47.27.1319.741@47.27.1319.741" timestamp="1578902972684" />
+    <state x="362" y="224" key="com.intellij.ide.util.TipDialog/47.27.1319.741@47.27.1319.741" timestamp="1578977979445" />
     <state x="360" y="27" width="683" height="741" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1578551972807">
       <screen x="47" y="27" width="1319" height="741" />
     </state>

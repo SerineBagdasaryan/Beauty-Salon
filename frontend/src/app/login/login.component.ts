@@ -82,6 +82,9 @@ if (this.authService.isAuthAdmin()) {
       if (data.token && data.message.user === 'admin') {
         this.router.navigate(['admin']);
       }
+      if (this.authService.isAuthenticated()) {
+        this.router.navigate(['home']);
+      }
       if (data.message.user === 'user') {
         window.location.href = '/home';
         // this.router.navigate(['home']);

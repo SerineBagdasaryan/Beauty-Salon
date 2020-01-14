@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {AdminService} from '../admin.service';
+import {CdkDragDrop, moveItemInArray} from '@angular/cdk/drag-drop';
 
 @Component({
   selector: 'app-get-menu',
@@ -14,7 +15,16 @@ export class GetMenuComponent implements OnInit {
   ngOnInit() {
     this.getMenuPage();
   }
-  deleteMenu(id) {
+  getId(id) {
+    console.log(id, 'id');
+  }
+  drop(event: CdkDragDrop<string[]>) {
+    moveItemInArray(this.menu, event.previousIndex, event.currentIndex);
+    // console.log(event, 'p');
+    // console.log(event.currentIndex, 'c');
+    this.service.dragAndDrop(event.currentIndex, event.previousIndex);
+  }
+deleteMenu(id) {
     this.service.deleteMenu(id).subscribe((data: any) => {
       console.log(data);
     });

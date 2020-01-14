@@ -186,6 +186,10 @@ deleteService(id) {
   createService(formData) {
 return this.http.post(`${this.url}/createService`, formData);
   }
+  dragAndDrop(currentIndex, previousIndex) {
+    const obj = {currentIndex, previousIndex}
+    return this.http.post(`${this.url}/dragDrop`, obj);
+  }
 }
 
 

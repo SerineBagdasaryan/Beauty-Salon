@@ -38,6 +38,10 @@ res.send(data);
  })
 
 }
+exports.dragDrop = function (req,res) {
+console.log(req.body);
+res.send('hy');
+}
 
 exports.getHomepageData = function (req,res) {
 db.query(`select * from homepages`, function (err,data) {

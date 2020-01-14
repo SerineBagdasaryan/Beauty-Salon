@@ -63,4 +63,5 @@ router.post('/createPrice', controller.createPrice);
 router.get('/editePrice/:id', controller.editePrice);
 router.get('/editeService/:id', controller.editeService);
 router.get('/editeContact/:id', controller.editeContact);
+router.post('/dragDrop', controller.dragDrop);
 module.exports = router;
