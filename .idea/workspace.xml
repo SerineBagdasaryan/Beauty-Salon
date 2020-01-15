@@ -4,16 +4,28 @@
     <list default="true" id="c664a6bf-1ce9-4afc-810b-18f8cfd6237f" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/controllers/AdminController.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/controllers/AdminController.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/controllers/ServiceController.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/controllers/ServiceController.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/backend/routes/adminRoutes.js" beforeDir="false" afterPath="$PROJECT_DIR$/backend/routes/adminRoutes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/admin/admin-header/admin-header.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/admin/admin-header/admin-header.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/admin/admin-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/admin/admin-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/admin/admin.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/admin/admin.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/app/admin/admin.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/admin/admin.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/admin/get-menu/get-menu.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/admin/get-menu/get-menu.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/admin/admin/admin.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/admin/admin/admin.component.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/admin/admin/admin.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/admin/admin/admin.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/admin/edite-service1/edite-service1.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/admin/edite-service1/edite-service1.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/admin/edite-service1/edite-service1.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/admin/edite-service1/edite-service1.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/admin/edite-service3/edite-service3.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/admin/edite-service3/edite-service3.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/admin/edite-service3/edite-service3.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/admin/edite-service3/edite-service3.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/app/admin/get-menu/get-menu.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/admin/get-menu/get-menu.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/app/admin/get-menu/get-menu.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/admin/get-menu/get-menu.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/app.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/admin/get-service3/get-service3.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/admin/get-service3/get-service3.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/admin/get-team/get-team.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/admin/get-team/get-team.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/admin/getservice1/getservice1.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/admin/getservice1/getservice1.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/admin/getservice1/getservice1.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/admin/getservice1/getservice1.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/src/app/login/login.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/login/login.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/images/1578904821617_g5.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/assets/images/1578904821617_g6.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/service/service.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/service/service.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/app/service/service.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/app/service/service.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/images/1578853943912_t2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/assets/images/1578854036459_t4.png" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -249,7 +261,11 @@
       <workItem from="1578892380959" duration="373000" />
       <workItem from="1578902971293" duration="14478000" />
       <workItem from="1578930662624" duration="2471000" />
-      <workItem from="1578977559128" duration="739000" />
+      <workItem from="1578977559128" duration="15081000" />
+      <workItem from="1578996763571" duration="4799000" />
+      <workItem from="1579002163739" duration="4316000" />
+      <workItem from="1579013642675" duration="15696000" />
+      <workItem from="1579064850042" duration="3707000" />
     </task>
     <servers />
   </component>
@@ -257,10 +273,10 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="301" y="58" width="800" height="677" key="#SQL_Dialects" timestamp="1578164719960">
+    <state x="301" y="58" width="800" height="677" key="#SQL_Dialects" timestamp="1579006614579">
       <screen x="47" y="27" width="1319" height="741" />
     </state>
-    <state x="301" y="58" width="800" height="677" key="#SQL_Dialects/47.27.1319.741@47.27.1319.741" timestamp="1578164719960" />
+    <state x="301" y="58" width="800" height="677" key="#SQL_Dialects/47.27.1319.741@47.27.1319.741" timestamp="1579006614579" />
     <state x="301" y="58" width="800" height="677" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1578744058912">
       <screen x="47" y="27" width="1319" height="741" />
     </state>
@@ -293,10 +309,10 @@
       <screen x="47" y="27" width="1319" height="741" />
     </state>
     <state x="70" y="27" width="1230" height="470" key="com.intellij.history.integration.ui.views.FileHistoryDialog/47.27.1319.741@47.27.1319.741" timestamp="1578679253914" />
-    <state x="362" y="224" key="com.intellij.ide.util.TipDialog" timestamp="1578977979445">
+    <state x="362" y="224" key="com.intellij.ide.util.TipDialog" timestamp="1579065010500">
       <screen x="47" y="27" width="1319" height="741" />
     </state>
-    <state x="362" y="224" key="com.intellij.ide.util.TipDialog/47.27.1319.741@47.27.1319.741" timestamp="1578977979445" />
+    <state x="362" y="224" key="com.intellij.ide.util.TipDialog/47.27.1319.741@47.27.1319.741" timestamp="1579065010500" />
     <state x="360" y="27" width="683" height="741" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1578551972807">
       <screen x="47" y="27" width="1319" height="741" />
     </state>
@@ -309,10 +325,10 @@
       <screen x="47" y="27" width="1319" height="741" />
     </state>
     <state x="423" y="27" width="556" height="741" key="refactoring.ChangeSignatureDialog/47.27.1319.741@47.27.1319.741" timestamp="1578074657126" />
-    <state x="369" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1578757463253">
+    <state x="369" y="89" width="672" height="678" key="search.everywhere.popup" timestamp="1578997866560">
       <screen x="47" y="27" width="1319" height="741" />
     </state>
-    <state x="369" y="89" width="672" height="678" key="search.everywhere.popup/47.27.1319.741@47.27.1319.741" timestamp="1578757463253" />
+    <state x="369" y="89" width="672" height="678" key="search.everywhere.popup/47.27.1319.741@47.27.1319.741" timestamp="1578997866560" />
     <state x="431" y="310" width="540" height="172" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1578902691448">
       <screen x="47" y="27" width="1319" height="741" />
     </state>

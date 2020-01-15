@@ -1,41 +1,12 @@
 <div class="container">
 <table  class="container text-center"  border="1">
-
-  <tr>
-    <td><img style="width: 200px; height: 200px" src="../../../assets/img/{{serviceData.image1}}" alt=""></td>
-    <td >{{ serviceData.text1}}</td>
-  </tr>
-  <tr>
-    <td><img style="width: 200px; height: 200px" src="../../../assets/img/{{serviceData.image2}}" alt=""></td>
-    <td >{{ serviceData.text2}}</td>
-
-  </tr>
-
-  <tr>
-    <td><img style="width: 200px; height: 200px" src="../../../assets/img/{{serviceData.image3}}" alt=""></td>
-    <td >{{ serviceData.text3}}</td>
-
-  </tr>
-  <tr>
-    <td><img style="width: 200px; height: 200px" src="../../../assets/img/{{serviceData.image4}}" alt=""></td>
-    <td >{{ serviceData.text4}}</td>
-
-  </tr>
-  <tr>
-    <td><img style="width: 200px; height: 200px" src="../../../assets/img/{{serviceData.image5}}" alt=""></td>
-    <td >{{ serviceData.text5}}</td>
-
-  </tr>
-  <tr>
-    <td><img  style="width: 200px; height: 200px" src="../../../assets/img/{{serviceData.image6}}" alt=""></td>
-    <td >{{ serviceData.text6}}</td>
-
+  <tr *ngFor="let item of serviceData">
+    <td ><img style="width: 200px; height: 200px" src="../../../assets/images/{{item.image}}" alt=""></td>
+   <td> {{ item.description}}</td>
+ <td><a class="btn btn-primary btn-lg" [routerLink]="['/editeservice1/', item.id]" skipLocationChange >Edit Service</a></td>
+  <td> <a  class="btn btn-danger btn-lg" (click)='deleteService(item.id)'>Delete Service</a></td>
   </tr>
 </table>
-  <div class="form-group">
-    <a class="btn btn-primary btn-block btn-lg" [routerLink]="['/editeservice1']" skipLocationChange >Edit Service</a>
-    <a  class="btn btn-danger btn-block btn-lg" (click)='deleteService(serviceData.id)'>Delete Service</a>
-  </div>
 </div>
 
 

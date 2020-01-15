@@ -10,7 +10,7 @@ export class ServiceComponent implements OnInit {
   servicesData: any = [];
   service2: any = {};
   service3: any = {};
-  imageServic: any = {};
+  imageServic: any = [];
   constructor(private service: UserService) { }
 
   ngOnInit() {
@@ -27,7 +27,7 @@ export class ServiceComponent implements OnInit {
   }
   imageService() {
     this.service.imageServices().subscribe((data: any) => {
-   this.imageServic = data[0];
+   this.imageServic = data;
    console.log(this.imageServic, 'img');
     });
   }

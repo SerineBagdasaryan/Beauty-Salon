@@ -7,10 +7,10 @@
     <td >{{ serviceData.text2}}</td>
   </tr>
   <tr>
-    <td> <a [href]="serviceData.video" class="play-btn"><img class="play" src="../../assets/img/{{serviceData.image}}" alt=""></a></td>
+    <td>  <a [href]="serviceData.video" class="play-btn"><img class="play" src="../../assets/img/{{serviceData.image}}" alt=""></a>
+      <img class="main img-fluid" src="../../../assets/img/about-img.jpg" alt=""></td>
   </tr>
 </table>
-  <div class="form-group"><a class="btn btn-primary btn-block btn-lg " [routerLink]="['/editeservice3']" skipLocationChange >Edit Service</a>
-    <a  class="btn btn-danger btn-block btn-lg" (click)='deleteService(serviceData.id)'>Delete Service</a></div>
+  <div class="form-group"><a class="btn btn-primary  btn-lg " [routerLink]="['/editeservice3']" skipLocationChange >Edit Service</a>
+    <a  class="btn btn-danger btn-lg" (click)='deleteService(serviceData.id)'>Delete Service</a></div>
 </div>
-

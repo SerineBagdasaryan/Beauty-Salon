@@ -1,5 +1,7 @@
 <div cdkDropList class="example-list" (cdkDropListDropped)="drop($event)">
-  <div class="example-box" *ngFor="let item of menu" cdkDrag><span class="ml-3" (mouseenter)="getId(item.id)">{{item.name}} {{ item.routerlink}}</span>
+  <div class="example-box" *ngFor="let item of menu" cdkDrag>
+    <input id = "input" type="hidden" value="{{item.id}}">
+    <span class="ml-3">{{item.name}} {{ item.routerlink}}</span>
     <a class="btn btn-primary btn-sm" [routerLink]="['/editemenu/', item.id]" skipLocationChange> Edite Menu</a>
   <a  class="btn btn-danger  btn-sm" (click)='deleteMenu(item.id)'>Delete Menu</a>
   </div>

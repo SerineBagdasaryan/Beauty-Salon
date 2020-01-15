@@ -39,10 +39,56 @@ res.send(data);
 
 }
 exports.dragDrop = function (req,res) {
-console.log(req.body);
-res.send('hy');
-}
+ const previousIndex = req.body.previousIndex;
+console.log(typeof previousIndex);
+const currentIndex = req.body.currentIndex;
 
+let currentName;
+let currentLink;
+let previousLink;
+let previousName;
+let previousId;
+let currentId;
+db.query(`select * from menu`, function (err,data) {
+if(err) return console.log(err);
+ previousName = data[previousIndex].name;
+ previousId = data[previousIndex].id;
+ previousLink = data[previousIndex].routerlink;
+ currentName = data[currentIndex].name;
+ currentId = data[currentIndex].id;
+ currentLink = data[currentIndex].routerlink;
+ console.log(previousLink);
+ console.log(previousName);
+ console.log(currentName);
+ console.log(currentLink);
+ db.query(`update menu set  name= ?,routerlink =?  where id =?`,[currentName,currentLink,previousId], function (err,data) {
+  if(err) return console.log(err);
+  console.log(data);
+ });
+ db.query(`update menu set  name= ?,routerlink =?  where id =?`,[previousName,previousLink,currentId], function (err,data) {
+  if(err) return console.log(err);
+  console.log(data);
+ });
+})
+ res.send(req.body);
+
+}
+exports.createServiceWithImages = function(req,res) {
+ const description = req.body.description;
+ if(req.files) {
+  let filename;
+  req.files.forEach(function (file) {
+  filename = (new Date).valueOf() + "_" + file.originalname;
+   fs.rename(file.path, '../frontend/src/assets/images/' + filename, function (err) {
+    if (err) throw err;
+   });
+  })
+  db.query(`insert into serviceWithImages (description, image) values(?,?)` , [description, filename], function (err,data) {
+if(err) return console.log(err);
+res.send(data);
+  })
+ }
+}
 exports.getHomepageData = function (req,res) {
 db.query(`select * from homepages`, function (err,data) {
  if(err) return console.log(err);
@@ -301,11 +347,22 @@ exports.updateHome = function (req,res) {
 
 exports.deleteHomePage = function(req, res) {
  console.log(req.body);
- const id = req.params.id;
- // db.query("DELETE FROM homepages WHERE id=?", [id], function(err, data) {
- //  if(err) return console.log(err);
- //  res.send(data);
- // });
+ const id  = req.params.id;
+ let imageName;
+ db.query('select image from homepages where id=?', [id], function (err,data) {
+  if(err) return console.log(err);
+  imageName = data[0].image;
+  console.log(imageName);
+  const path = '../frontend/src/assets/images/' + imageName;
+  fs.unlink(path, function (err) {
+   if (err) throw err;
+   console.log('File deleted!');
+  });
+ })
+ db.query("DELETE FROM homepages WHERE id=?", [id], function(err, data) {
+  if(err) return console.log(err);
+  res.send(data);
+ });
 };
 
 exports.getTeam = function (req,res) {
@@ -391,10 +448,21 @@ exports.updateContact  = function (req,res) {
 exports.deleteTeamPage = function(req,res) {
  const id = req.params.id;
  console.log(id);
-//  db.query(`delete from team where id =?`, [id], function (err,data) {
-// if(err) return console.log(err);
-// res.send(data);
-//  })
+ let imageName;
+ db.query('select image from team where id=?', [id], function (err,data) {
+  if(err) return console.log(err);
+  imageName = data[0].image;
+  console.log(imageName);
+  const path = '../frontend/src/assets/images/' + imageName;
+  fs.unlink(path, function (err) {
+   if (err) throw err;
+   console.log('File deleted!');
+  });
+ })
+ db.query(`delete from team where id =?`, [id], function (err,data) {
+if(err) return console.log(err);
+res.send(data);
+ })
 }
 exports.deleteContact = function (req,res) {
 const id = req.params.id;
@@ -490,13 +558,31 @@ if(err) return console.log(err);
 res.send(data);
  })
 }
+exports.editeService1 = function(req,res) {
+ const id  = req.params.id;
+ db.query("select * from serviceWithImages where id=?", [id], function (err,data) {
+if(err) return console.log(err);
+res.send(data);
+ })
+}
 exports.deleteService = function (req,res) {
 const id  = req.params.id;
 console.log(id);
-// db.query(`delete from service  where id=?` , [id], function (err,data) {
-//  if(err) return console.log(err);
-//  res.send(data);
-// })
+ let imageName;
+ db.query('select image from service where id=?', [id], function (err,data) {
+  if(err) return console.log(err);
+  imageName = data[0].image;
+  console.log(imageName);
+  const path = '../frontend/src/assets/images/' + imageName;
+  fs.unlink(path, function (err) {
+   if (err) throw err;
+   console.log('File deleted!');
+  });
+ })
+db.query(`delete from service  where id=?` , [id], function (err,data) {
+ if(err) return console.log(err);
+ res.send(data);
+})
 }
 
 exports.updateservice = function (req,res) {
@@ -525,7 +611,7 @@ exports.updateservice = function (req,res) {
  }
 }
 exports.getService1= function (req,res) {
-db.query(`select * from service1`, function (err,data) {
+db.query(`select * from serviceWithImages`, function (err,data) {
  if(err) return console.log(err);
  res.send(data);
 })
@@ -533,26 +619,53 @@ db.query(`select * from service1`, function (err,data) {
 exports.deleteService1 = function (req,res) {
 const id  = req.params.id;
 console.log(id);
-// db.query(`delete from service1 where id = ?`, [id] ,function (err,data) {
-//  if(err) return console.log(err);
-//  res.send(data);
-// })
+ let imageName;
+ db.query('select image from serviceWithImages where id=?', [id], function (err,data) {
+  if(err) return console.log(err);
+  imageName = data[0].image;
+  console.log(imageName);
+  const path = '../frontend/src/assets/images/' + imageName;
+  fs.unlink(path, function (err) {
+   if (err) throw err;
+   console.log('File deleted!');
+  });
+ })
+db.query(`delete from serviceWithImages where id = ?`, [id] ,function (err,data) {
+ if(err) return console.log(err);
+ res.send(data);
+})
 }
+
 
 exports.updateService1 = function (req,res) {
- const text1 = req.body.text1;
- const text2 = req.body.text2;
- const text3 = req.body.text3;
- const text4 = req.body.text4;
- const text5 = req.body.text5;
- const text6 = req.body.text6;
- db.query(`update service1 set text1=?, text2 = ?, text3 = ?, text4= ?, text5= ?, text6= ?`, [text1, text2, text3, text4, text5, text6], function (err,data) {
-  if(err) return console.log(err);
-  res.send(data);
-
- })
-
+ const id = req.body.id;
+ const description = req.body.description;
+ const imageName = req.body.imageName;
+ console.log(req.body);
+ if(req.files.length > 0) {
+  let filename;
+  req.files.forEach(function (file) {
+   filename = (new Date).valueOf() + "_" + file.originalname;
+   fs.rename(file.path, '../frontend/src/assets/images/' + filename, function (err) {
+    if (err) throw err;
+   });
+  })
+  db.query(`update serviceWithImages set  description= ?, image=? where id=?`, [description, filename, id], function (err, data) {
+   if (err) return console.log(err);
+   res.send(data);
+  })
+ } else {
+  db.query(`update serviceWithImages set  description= ?, image=? where id=?`, [description, imageName, id], function (err, data) {
+   if (err) return console.log(err);
+   res.send(data);
+  })
+ }
 }
+
+
+
+
+
 exports.getService2 = function (req,res) {
 db.query(`select * from service2`,function (err,data) {
  if(err) return console.log(err);
@@ -606,7 +719,8 @@ exports.deleteService3 =function (req,res) {
 exports.updateService3 = function (req,res) {
  const text1 = req.body.text1;
  const text2 = req.body.text2;
- db.query(`update service3 set  text1=?, text2 = ?`, [text1, text2], function (err,data) {
+ const video = req.body.video;
+ db.query(`update service3 set  text1=?, text2 = ?, video = ?`, [text1, text2, video], function (err,data) {
   if(err) return console.log(err);
   res.send(data);
  })

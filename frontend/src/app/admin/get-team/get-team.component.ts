@@ -23,6 +23,9 @@ export class GetTeamComponent implements OnInit {
   deleteTeampage(id) {
     this.service.deleteTeampage(id).subscribe((data: any) => {
       console.log(data);
+      this.service.getTeam().subscribe((res: any) => {
+        this.team = res;
+      });
     });
   }
 }

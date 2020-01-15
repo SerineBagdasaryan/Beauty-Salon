@@ -37,12 +37,13 @@ import { GetPriceComponent } from './get-price/get-price.component';
 import { CreateServiceComponent } from './create-service/create-service.component';
 import { CreateContactComponent } from './create-contact/create-contact.component';
 import {DragDropModule} from '@angular/cdk/drag-drop';
+import { ServiceWithImagesComponent } from './service-with-images/service-with-images.component';
 
 
 
 @NgModule({
   // tslint:disable-next-line:max-line-length
-  declarations: [AdminComponent, AdminHeaderComponent, AdminFooterComponent, AdminSidebarComponent, UsersComponent, HomepagesComponent, EditHomepageComponent, GetTeamComponent, EditeTeamComponent, GetContactComponent, EditeContactComponent, GetMenuComponent, EditeMenuComponent, EditePriceComponent, GetServiceComponent, EditeServiceComponent, Getservice1Component, EditeService1Component, GetService2Component, EditeService2Component, GetService3Component, EditeService3Component, GetFooterComponent, EditeFooterComponent, CreateMenuComponent, CreateOurWorkImageComponent, GetImagesWorkComponent, EditeOurWorkImageComponent, TeamMemberComponent, CreatePriceComponent, GetPriceComponent, CreateServiceComponent, CreateContactComponent],
+  declarations: [AdminComponent, AdminHeaderComponent, AdminFooterComponent, AdminSidebarComponent, UsersComponent, HomepagesComponent, EditHomepageComponent, GetTeamComponent, EditeTeamComponent, GetContactComponent, EditeContactComponent, GetMenuComponent, EditeMenuComponent, EditePriceComponent, GetServiceComponent, EditeServiceComponent, Getservice1Component, EditeService1Component, GetService2Component, EditeService2Component, GetService3Component, EditeService3Component, GetFooterComponent, EditeFooterComponent, CreateMenuComponent, CreateOurWorkImageComponent, GetImagesWorkComponent, EditeOurWorkImageComponent, TeamMemberComponent, CreatePriceComponent, GetPriceComponent, CreateServiceComponent, CreateContactComponent, ServiceWithImagesComponent],
     imports: [
         CommonModule,
         AdminRoutingModule,

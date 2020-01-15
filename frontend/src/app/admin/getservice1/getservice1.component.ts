@@ -7,18 +7,21 @@ import {AdminService} from '../admin.service';
   styleUrls: ['./getservice1.component.css']
 })
 export class Getservice1Component implements OnInit {
-  private serviceData: any = {};
+  private serviceData: any = [];
 
   constructor(private service: AdminService) { }
 
   ngOnInit() {
     this.service.getservice1().subscribe((data: any) => {
-       this.serviceData = data[0];
+       this.serviceData = data;
     });
   }
   deleteService(id) {
     this.service.deleteService1(id).subscribe((data: any) => {
       console.log(data);
+      this.service.getservice1().subscribe((res: any) => {
+        this.serviceData = res;
+      });
     });
   }
 }

@@ -50,55 +50,14 @@
   <div class="container-fluid">
     <div class="row no-padding">
       <div class="active-gallery">
-        <div class="item single-gallery">
+        <div class="item single-gallery" *ngFor="let item of imageServic">
           <div class="thumb">
-            <img src="../../assets/img/{{imageServic.image1}}" alt="">
+            <img src="../../assets/images/{{item.image}}" alt="">
             <div class="align-items-center justify-content-center d-flex">
-            <a href="">  <h4 class="text-white">{{imageServic.text1}}</h4></a>
+            <a href="">  <h4 class="text-white">{{item.description}}</h4></a>
             </div>
           </div>
         </div>
-        <div class="item single-gallery">
-          <div class="thumb">
-            <img src="../../assets/img/{{imageServic.image2}}" alt="">
-            <div class="align-items-center justify-content-center d-flex">
-              <a href=""> <h4 class="text-white">{{imageServic.text2}}</h4></a>
-            </div>
-          </div>
-        </div>
-        <div class="item single-gallery">
-          <div class="thumb">
-            <img src="../../assets/img/{{imageServic.image3}}" alt="">
-            <div class="align-items-center justify-content-center d-flex">
-              <a href=""> <h4 class="text-white">{{imageServic.text3}}</h4></a>
-            </div>
-          </div>
-        </div>
-        <div class="item single-gallery">
-          <div class="thumb">
-            <img src="../../assets/img/{{imageServic.image4}}" alt="">
-            <div class="align-items-center justify-content-center d-flex">
-              <a href=""> <h4 class="text-white">{{imageServic.text4}}</h4></a>
-            </div>
-          </div>
-        </div>
-        <div class="item single-gallery">
-          <div class="thumb">
-            <img src="../../assets/img/{{imageServic.image5}}" alt="">
-            <div class="align-items-center justify-content-center d-flex">
-              <a href=""> <h4 class="text-white">{{imageServic.text5}}</h4></a>
-            </div>
-          </div>
-        </div>
-        <div class="item single-gallery">
-          <div class="thumb">
-            <img src="../../assets/img/{{imageServic.image6}}" alt="">
-            <div class="align-items-center justify-content-center d-flex">
-              <a href=""> <h4 class="text-white">{{imageServic.text6}}</h4></a>
-            </div>
-          </div>
-        </div>
-
       </div>
     </div>
   </div>

@@ -17,12 +17,13 @@ export class EditeService3Component implements OnInit {
   createForm() {
     this.serviceForm = this.fb.group({
       text1: ['', Validators.required],
-      text2: ['', Validators.required]
+      text2: ['', Validators.required],
+      video: ['', Validators.required]
     });
   }
-  updateService(text1, text2) {
+  updateService(text1, text2, video) {
     // tslint:disable-next-line:max-line-length
-    this.service.updateService3(text1, text2).subscribe((data: any) => {
+    this.service.updateService3(text1, text2, video).subscribe((data: any) => {
       console.log(data);
     });
   }

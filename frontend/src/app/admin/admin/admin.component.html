@@ -3,7 +3,7 @@
 
   <!-- LEFT-CONTAINER -->
   <div class="row">
-  <div class="left-container container col-md-2">
+  <div class="left-container container col-md-3">
     <div class="menu-box block">
       <h2 class="titular"></h2>
       <ul class="menu-box-menu">
@@ -22,7 +22,8 @@
           <a style="text-align: center" [routerLink] ="['getPrice']"  skipLocationChange class="menu-box-tab">Get Price page</a>
           <a style="text-align: center" [routerLink] ="['createService']"  skipLocationChange class="menu-box-tab">Create service</a>
           <a style="text-align: center" [routerLink] ="['getService']"  skipLocationChange class="menu-box-tab">Get Service page</a>
-          <a style="text-align: center" [routerLink] ="['getService1']"  skipLocationChange class="menu-box-tab">Service_1 page</a>
+          <a style="text-align: center" [routerLink] ="['createServiceWithImages']"  skipLocationChange class="menu-box-tab"> Create Service With images</a>
+          <a style="text-align: center" [routerLink] ="['getService1']"  skipLocationChange class="menu-box-tab">Service With images</a>
           <a style="text-align: center" [routerLink] ="['getService2']"  skipLocationChange class="menu-box-tab">Service_2 page</a>
           <a style="text-align: center" [routerLink] ="['getService3']"  skipLocationChange class="menu-box-tab">Service_3 page</a>
           <a style="text-align: center" [routerLink] ="['getfooter']"  skipLocationChange class="menu-box-tab">Footer page</a>
@@ -31,7 +32,7 @@
       </ul>
     </div>
     </div>
-    <div class="col-md-8">
+    <div class="col-md-7">
       <router-outlet></router-outlet>
 <!--      <app-get-footer *ngIf="show"></app-get-footer>-->
     </div>

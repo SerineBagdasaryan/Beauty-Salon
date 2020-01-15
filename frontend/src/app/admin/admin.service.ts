@@ -113,15 +113,17 @@ deleteService(id) {
   editeService(id) {
     return this.http.get(`${this.url}/editeService/${id}`);
   }
+  editeService1(id) {
+    return this.http.get(`${this.url}/editeService1/${id}`);
+  }
   getservice1() {
     return this.http.get(`${this.url}/getService1`);
   }
   deleteService1(id) {
     return this.http.get(`${this.url}/deleteService1/${id}`);
   }
-  updateService1(text1, text2, text3, text4, text5, text6) {
-    const obj = {text1, text2, text3, text4, text5, text6};
-    return this.http.post(`${this.url}/updateservice1`, obj);
+  updateService1(formData) {
+    return this.http.post(`${this.url}/updateservice1`, formData);
   }
   getservice2() {
     return this.http.get(`${this.url}/getService2`);
@@ -139,8 +141,8 @@ deleteService(id) {
   deleteService3(id) {
     return this.http.get(`${this.url}/deleteService3/${id}`);
   }
-  updateService3(text1, text2) {
-    const obj = {text1, text2};
+  updateService3(text1, text2, video) {
+    const obj = {text1, text2, video};
     return this.http.post(`${this.url}/updateservice3`, obj);
   }
   getfooterData() {
@@ -186,8 +188,11 @@ deleteService(id) {
   createService(formData) {
 return this.http.post(`${this.url}/createService`, formData);
   }
+  createServiceWithImages(formData) {
+    return this.http.post(`${this.url}/createServiceWithImages` , formData);
+  }
   dragAndDrop(currentIndex, previousIndex) {
-    const obj = {currentIndex, previousIndex}
+    const obj = {currentIndex, previousIndex};
     return this.http.post(`${this.url}/dragDrop`, obj);
   }
 }
